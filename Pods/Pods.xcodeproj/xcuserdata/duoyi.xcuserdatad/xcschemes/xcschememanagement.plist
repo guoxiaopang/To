@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MagicalRecord.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18C8E55AE12F649AA38A10D9801B89CB</key>
+		<key>2678BD85E76D8C5929AE3EAA474744B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>417EA9844EC286C5B1B8FCB029C00130</key>
+		<key>3FB9E0CDB3F8C3EC7821D18F1809FD8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65224242B1D6571CDFFB189F6FF258BC</key>
+		<key>410666C562DDBC35164836B5B9F1DE90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6980645CA4B3DADCE0768879D1E165FE</key>
+		<key>416FEA050847E6B1F5F3A0262A97D369</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
+		<key>521451F1880CE773EC624539D94BF34A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C8C3C5A239C99D3C7439671730E1238F</key>
+		<key>96D028D8410E9A401CDCEFD40406EEC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E781A93B196D8342574B506B0A196145</key>
+		<key>9C1A0FFD049CC13F646186811FA3F574</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7D4F168FEE356C1404A8C66A3542EBA</key>
+		<key>D52144DE9D7255DE912490FF5A806573</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E14A62900910444707A5504D25EC98DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -6,5 +6,6 @@ pod 'YYText‘
 pod 'YYWebImage'
 pod 'YYModel'
 pod 'MagicalRecord’
+pod 'MJRefresh'
 end
 

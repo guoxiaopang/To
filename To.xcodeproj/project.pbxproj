@@ -27,8 +27,12 @@
 		3572B1D51E1501A700521111 /* EventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1D41E1501A700521111 /* EventModel.m */; };
 		3572B1D71E15037C00521111 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3572B1D61E15037C00521111 /* CoreData.framework */; };
 		3572B1DD1E15087700521111 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1DB1E15087700521111 /* Model.xcdatamodeld */; };
+		3572B1E31E150AF300521111 /* PeopleListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1E21E150AF300521111 /* PeopleListTableViewCell.m */; };
+		3572B1E61E15125200521111 /* PeopleListDatamanager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1E51E15125200521111 /* PeopleListDatamanager.m */; };
+		3572B1EC1E1514D000521111 /* UserGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1EB1E1514D000521111 /* UserGroup.m */; };
+		3572B1EF1E15153600521111 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1EE1E15153600521111 /* UserManager.m */; };
 		35A89CE61E13B92100E2410A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A89CE51E13B92100E2410A /* main.m */; };
-		86E8E835B12C934CD2FA821E /* libPods-To.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9BBCE1C5506B8FA392CE40 /* libPods-To.a */; };
+		386BC0B1104AF437AB282375 /* Pods_To.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE10E152DAB51DF8A88BFE6 /* Pods_To.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,11 +73,19 @@
 		3572B1D41E1501A700521111 /* EventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventModel.m; sourceTree = "<group>"; };
 		3572B1D61E15037C00521111 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3572B1DC1E15087700521111 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		3572B1E11E150AF300521111 /* PeopleListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListTableViewCell.h; sourceTree = "<group>"; };
+		3572B1E21E150AF300521111 /* PeopleListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListTableViewCell.m; sourceTree = "<group>"; };
+		3572B1E41E15125100521111 /* PeopleListDatamanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListDatamanager.h; sourceTree = "<group>"; };
+		3572B1E51E15125200521111 /* PeopleListDatamanager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListDatamanager.m; sourceTree = "<group>"; };
+		3572B1EA1E1514D000521111 /* UserGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGroup.h; sourceTree = "<group>"; };
+		3572B1EB1E1514D000521111 /* UserGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGroup.m; sourceTree = "<group>"; };
+		3572B1ED1E15153600521111 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		3572B1EE1E15153600521111 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38B5F052C9FB9A612DC8CBB5 /* Pods-To.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To.release.xcconfig"; path = "Pods/Target Support Files/Pods-To/Pods-To.release.xcconfig"; sourceTree = "<group>"; };
-		6A9BBCE1C5506B8FA392CE40 /* libPods-To.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-To.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BE10E152DAB51DF8A88BFE6 /* Pods_To.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8F601A3EC5A6AFB0E3D008 /* Pods-To.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To/Pods-To.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3572B1D71E15037C00521111 /* CoreData.framework in Frameworks */,
-				86E8E835B12C934CD2FA821E /* libPods-To.a in Frameworks */,
+				386BC0B1104AF437AB282375 /* Pods_To.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +157,8 @@
 		3572B1881E14A28B00521111 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3572B1E41E15125100521111 /* PeopleListDatamanager.h */,
+				3572B1E51E15125200521111 /* PeopleListDatamanager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +166,8 @@
 		3572B1891E14A28B00521111 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3572B1E11E150AF300521111 /* PeopleListTableViewCell.h */,
+				3572B1E21E150AF300521111 /* PeopleListTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +289,10 @@
 				3572B1D31E1501A700521111 /* EventModel.h */,
 				3572B1D41E1501A700521111 /* EventModel.m */,
 				3572B1DB1E15087700521111 /* Model.xcdatamodeld */,
+				3572B1EA1E1514D000521111 /* UserGroup.h */,
+				3572B1EB1E1514D000521111 /* UserGroup.m */,
+				3572B1ED1E15153600521111 /* UserManager.h */,
+				3572B1EE1E15153600521111 /* UserManager.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -318,7 +338,7 @@
 			children = (
 				3572B1D61E15037C00521111 /* CoreData.framework */,
 				3572B1A31E14B05200521111 /* Photos.framework */,
-				6A9BBCE1C5506B8FA392CE40 /* libPods-To.a */,
+				8BE10E152DAB51DF8A88BFE6 /* Pods_To.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -447,7 +467,9 @@
 			files = (
 				3572B19F1E14A34900521111 /* TodayViewController.m in Sources */,
 				3572B1B81E14BE9F00521111 /* LeftHeadView.m in Sources */,
+				3572B1E31E150AF300521111 /* PeopleListTableViewCell.m in Sources */,
 				3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */,
+				3572B1EF1E15153600521111 /* UserManager.m in Sources */,
 				3572B1C11E14DBFD00521111 /* YYFPSLabel.m in Sources */,
 				3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */,
 				3572B1DD1E15087700521111 /* Model.xcdatamodeld in Sources */,
@@ -457,9 +479,11 @@
 				3572B1C21E14DBFD00521111 /* YYWeakProxy.m in Sources */,
 				35A89CE61E13B92100E2410A /* main.m in Sources */,
 				3572B1D21E15017300521111 /* TitleModel.m in Sources */,
+				3572B1EC1E1514D000521111 /* UserGroup.m in Sources */,
 				3572B19C1E14A33E00521111 /* PeopleListViewController.m in Sources */,
 				3572B1CF1E15015300521111 /* UserModel.m in Sources */,
 				3572B1C81E14DEDD00521111 /* UIColor+Hex.m in Sources */,
+				3572B1E61E15125200521111 /* PeopleListDatamanager.m in Sources */,
 				3572B1D51E1501A700521111 /* EventModel.m in Sources */,
 				3572B1B21E14B15700521111 /* UIViewController+JASidePanel.m in Sources */,
 				3572B1C51E14DC8400521111 /* ToNavigationController.m in Sources */,

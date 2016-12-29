@@ -3,6 +3,7 @@ PODS:
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
   - Masonry (1.0.2)
+  - MJRefresh (3.1.12)
   - YYCache (1.0.4)
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
@@ -16,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - MagicalRecord
   - Masonry
+  - MJRefresh
   - YYModel
   - YYText
   - YYWebImage
@@ -23,12 +25,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 79f49114dd81febeaae59bead879581410bd7269
+PODFILE CHECKSUM: 3e0bd60f8c7d394134c0e8615f359ca4aba90998
 
 COCOAPODS: 1.1.1

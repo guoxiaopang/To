@@ -15,6 +15,7 @@
 #import "ToNavigationController.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import "UserModel.h"
+#import "UserManager.h"
 
 @interface AppDelegate ()
 
@@ -76,12 +77,12 @@
     UserModel *model4 = [UserModel MR_createEntity];
     model4.name = @"r";
     model4.uuid = [NSUUID UUID].UUIDString;
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError * _Nullable error) {
-        NSLog(@"%@", @(contextDidSave));
-    }];
     
-    NSArray *persons = [UserModel MR_findAll];
-    NSLog(@"----%lu", (unsigned long)persons.count);
+    UserManager *manager = [UserManager shareInstance];
+    [manager addUser:model];
+    [manager addUser:model2];
+    [manager addUser:model3];
+    [manager addUser:model4];
 }
 
 @end

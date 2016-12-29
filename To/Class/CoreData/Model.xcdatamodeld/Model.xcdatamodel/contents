@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="UserGroup" representedClassName="UserGroup" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userArray" optional="YES" attributeType="Transformable" customClassName="NSArray" syncable="YES"/>
+    </entity>
     <entity name="UserModel" representedClassName="UserModel" syncable="YES">
         <attribute name="attributeArray" optional="YES" attributeType="Transformable" customClassName="NSArray" syncable="YES"/>
         <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,6 +13,7 @@
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UserModel" positionX="-54" positionY="-9" width="128" height="133"/>
+        <element name="UserModel" positionX="-306" positionY="-144" width="128" height="133"/>
+        <element name="UserGroup" positionX="-99" positionY="-99" width="128" height="73"/>
     </elements>
 </model>
