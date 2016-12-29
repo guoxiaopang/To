@@ -8,10 +8,16 @@
 
 #import "LeftViewController.h"
 #import "LeftTableViewCell.h"
-
+#import "LeftHeadView.h"
+#import "UIViewController+JASidePanel.h"
+#import "TodayViewController.h"
+#import "JASidePanelController.h"
+#import "PeopleListViewController.h"
+#import "ToNavigationController.h"
 @interface LeftViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) UITableView *tableView;
+@property(nonatomic, strong) LeftHeadView *headView;
 
 @end
 
@@ -42,8 +48,19 @@ static NSString *leftIdentCell = @"leftIdentCell";
         [_tableView registerClass:[LeftTableViewCell class] forCellReuseIdentifier:leftIdentCell];
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.showsVerticalScrollIndicator = false;
+        _tableView.tableHeaderView = self.headView;
     }
     return _tableView;
+}
+
+- (LeftHeadView *)headView
+{
+    if (!_headView)
+    {
+        _headView = [[LeftHeadView alloc] init];
+        _headView.frame = CGRectMake(0, 0, 100, 220);
+    }
+    return _headView;
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
@@ -58,11 +75,11 @@ static NSString *leftIdentCell = @"leftIdentCell";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.row == 0)
     {
-        [cell reloadData:@"今日事件"];
+        [cell reloadData:@"人物列表"];
     }
     else if (indexPath.row == 1)
     {
-        [cell reloadData:@"人物列表"];
+        [cell reloadData:@"今日事件"];
     }
     else if (indexPath.row == 2)
     {
@@ -70,4 +87,25 @@ static NSString *leftIdentCell = @"leftIdentCell";
     }
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0)
+    {
+        [self showController:[PeopleListViewController class]];
+    }
+    else if (indexPath.row == 1)
+    {
+#warning 这里可以懒加载
+        [self showController:[TodayViewController class]];
+    }
+}
+
+- (void)showController:(Class)controllerClass
+{
+    UIViewController *controller = [controllerClass new];
+    ToNavigationController *navigationVC = [[ToNavigationController alloc] initWithRootViewController:controller];
+    self.sidePanelController.centerPanel = navigationVC;
+}
+
 @end

@@ -16,6 +16,12 @@
 		3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1AE1E14B15700521111 /* JASidePanelController.m */; };
 		3572B1B21E14B15700521111 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1B01E14B15700521111 /* UIViewController+JASidePanel.m */; };
 		3572B1B51E14B1D900521111 /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1B41E14B1D900521111 /* LeftTableViewCell.m */; };
+		3572B1B81E14BE9F00521111 /* LeftHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1B71E14BE9F00521111 /* LeftHeadView.m */; };
+		3572B1BB1E14DAE500521111 /* SidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1BA1E14DAE500521111 /* SidePanelViewController.m */; };
+		3572B1C11E14DBFD00521111 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1BE1E14DBFD00521111 /* YYFPSLabel.m */; };
+		3572B1C21E14DBFD00521111 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1C01E14DBFD00521111 /* YYWeakProxy.m */; };
+		3572B1C51E14DC8400521111 /* ToNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1C41E14DC8400521111 /* ToNavigationController.m */; };
+		3572B1C81E14DEDD00521111 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1C71E14DEDD00521111 /* UIColor+Hex.m */; };
 		35A89CE61E13B92100E2410A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A89CE51E13B92100E2410A /* main.m */; };
 		86E8E835B12C934CD2FA821E /* libPods-To.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9BBCE1C5506B8FA392CE40 /* libPods-To.a */; };
 /* End PBXBuildFile section */
@@ -38,6 +44,18 @@
 		3572B1B01E14B15700521111 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
 		3572B1B31E14B1D900521111 /* LeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableViewCell.h; sourceTree = "<group>"; };
 		3572B1B41E14B1D900521111 /* LeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
+		3572B1B61E14BE9F00521111 /* LeftHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftHeadView.h; sourceTree = "<group>"; };
+		3572B1B71E14BE9F00521111 /* LeftHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftHeadView.m; sourceTree = "<group>"; };
+		3572B1B91E14DAE500521111 /* SidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidePanelViewController.h; sourceTree = "<group>"; };
+		3572B1BA1E14DAE500521111 /* SidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidePanelViewController.m; sourceTree = "<group>"; };
+		3572B1BD1E14DBFD00521111 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		3572B1BE1E14DBFD00521111 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		3572B1BF1E14DBFD00521111 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		3572B1C01E14DBFD00521111 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		3572B1C31E14DC8400521111 /* ToNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToNavigationController.h; sourceTree = "<group>"; };
+		3572B1C41E14DC8400521111 /* ToNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToNavigationController.m; sourceTree = "<group>"; };
+		3572B1C61E14DEDD00521111 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		3572B1C71E14DEDD00521111 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +88,7 @@
 		3572B17B1E14A28B00521111 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				3572B1BC1E14DBEA00521111 /* 公共 */,
 				3572B1931E14A2FF00521111 /* 侧滑 */,
 				3572B17C1E14A28B00521111 /* Other */,
 				3572B1861E14A28B00521111 /* 人物 */,
@@ -195,6 +214,8 @@
 			children = (
 				3572B1B31E14B1D900521111 /* LeftTableViewCell.h */,
 				3572B1B41E14B1D900521111 /* LeftTableViewCell.m */,
+				3572B1B61E14BE9F00521111 /* LeftHeadView.h */,
+				3572B1B71E14BE9F00521111 /* LeftHeadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,8 +227,25 @@
 				3572B1AE1E14B15700521111 /* JASidePanelController.m */,
 				3572B1AF1E14B15700521111 /* UIViewController+JASidePanel.h */,
 				3572B1B01E14B15700521111 /* UIViewController+JASidePanel.m */,
+				3572B1B91E14DAE500521111 /* SidePanelViewController.h */,
+				3572B1BA1E14DAE500521111 /* SidePanelViewController.m */,
 			);
 			path = "第三方";
+			sourceTree = "<group>";
+		};
+		3572B1BC1E14DBEA00521111 /* 公共 */ = {
+			isa = PBXGroup;
+			children = (
+				3572B1BD1E14DBFD00521111 /* YYFPSLabel.h */,
+				3572B1BE1E14DBFD00521111 /* YYFPSLabel.m */,
+				3572B1BF1E14DBFD00521111 /* YYWeakProxy.h */,
+				3572B1C01E14DBFD00521111 /* YYWeakProxy.m */,
+				3572B1C31E14DC8400521111 /* ToNavigationController.h */,
+				3572B1C41E14DC8400521111 /* ToNavigationController.m */,
+				3572B1C61E14DEDD00521111 /* UIColor+Hex.h */,
+				3572B1C71E14DEDD00521111 /* UIColor+Hex.m */,
+			);
+			path = "公共";
 			sourceTree = "<group>";
 		};
 		35A89CD81E13B92100E2410A = {
@@ -378,13 +416,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3572B19F1E14A34900521111 /* TodayViewController.m in Sources */,
+				3572B1B81E14BE9F00521111 /* LeftHeadView.m in Sources */,
 				3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */,
+				3572B1C11E14DBFD00521111 /* YYFPSLabel.m in Sources */,
 				3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */,
+				3572B1BB1E14DAE500521111 /* SidePanelViewController.m in Sources */,
 				3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */,
 				3572B1B51E14B1D900521111 /* LeftTableViewCell.m in Sources */,
+				3572B1C21E14DBFD00521111 /* YYWeakProxy.m in Sources */,
 				35A89CE61E13B92100E2410A /* main.m in Sources */,
 				3572B19C1E14A33E00521111 /* PeopleListViewController.m in Sources */,
+				3572B1C81E14DEDD00521111 /* UIColor+Hex.m in Sources */,
 				3572B1B21E14B15700521111 /* UIViewController+JASidePanel.m in Sources */,
+				3572B1C51E14DC8400521111 /* ToNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

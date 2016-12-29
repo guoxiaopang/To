@@ -7,14 +7,16 @@
 //
 
 #import "AppDelegate.h"
-#import "JASidePanelController.h"
+#import "SidePanelViewController.h"
 #import "PeopleListViewController.h"
 #import "TodayViewController.h"
 #import "LeftViewController.h"
+#import "YYFPSLabel.h"
+#import "ToNavigationController.h"
 
 @interface AppDelegate ()
 
-@property(nonatomic, strong)JASidePanelController *rootViewController;
+@property(nonatomic, strong)SidePanelViewController *rootViewController;
 
 @end
 
@@ -23,24 +25,28 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.rootViewController.shouldDelegateAutorotateToVisiblePanel = NO;
     PeopleListViewController *listVC = [[PeopleListViewController alloc] init];
     LeftViewController *leftVC = [[LeftViewController alloc] init];
     self.rootViewController.leftPanel = leftVC;
-    self.rootViewController.centerPanel = listVC;
+    self.rootViewController.centerPanel = [[ToNavigationController alloc] initWithRootViewController:listVC];
     
     self.window.rootViewController = self.rootViewController;
     [self.window makeKeyAndVisible];
+    
+    YYFPSLabel *label = [[YYFPSLabel alloc] init];
+    label.frame = CGRectMake(40, 20, 50, 30);
+    [self.window addSubview:label];
     return YES;
 }
 
-- (JASidePanelController *)rootViewController
+- (SidePanelViewController *)rootViewController
 {
     if (!_rootViewController)
     {
-        _rootViewController = [[JASidePanelController alloc] init];
+        _rootViewController = [[SidePanelViewController alloc] init];
         _rootViewController.shouldDelegateAutorotateToVisiblePanel = NO;
     }
     return _rootViewController;
 }
+
 @end
