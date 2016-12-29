@@ -19,19 +19,20 @@
 
 @implementation PeopleListDatamanager
 
-- (instancetype)init
+- (void)loadData
 {
-    self = [super init];
-    if (self)
+    [self.groupItem removeAllObjects];
+    [self.titleArray removeAllObjects];
+    NSArray *array = [[UserManager shareInstance] allGroup];
+    for (UserGroup *group in array)
     {
-        NSArray *array = [[UserManager shareInstance] allGroup];
-        for (UserGroup *group in array)
-        {
-            [self.groupItem addObject:group];
-            [self.titleArray addObject:group.title];
-        }
+        [self.groupItem addObject:group];
+        [self.titleArray addObject:group.title];
     }
-    return self;
+    if ([self.delegate respondsToSelector:@selector(peopleListDatamanagerSuccess:)])
+    {
+        [self.delegate peopleListDatamanagerSuccess:self];
+    }
 }
 
 #pragma mark - 懒加载

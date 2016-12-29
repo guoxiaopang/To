@@ -11,12 +11,15 @@
 #import "PeopleListTableViewCell.h"
 #import "UIColor+Hex.h"
 #import "PeopleListDatamanager.h"
+#import <MJRefresh/MJRefresh.h>
 
 static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
-@interface PeopleListViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface PeopleListViewController ()<UITableViewDelegate, UITableViewDataSource, PeopleListDatamanagerDelegate>
 
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) PeopleListDatamanager *dataManager;
+@property(nonatomic, strong) MJRefreshHeader *refreshHeader;
+
 @end
 
 @implementation PeopleListViewController
@@ -28,15 +31,21 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"人物列表";
     [self.view addSubview:self.tableView];
-    //self.automaticallyAdjustsScrollViewInsets = NO;
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self.dataManager loadData];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+   
 }
 
 #pragma mark 懒加载
+
 - (PeopleListDatamanager *)dataManager
 {
     if (!_dataManager)
     {
         _dataManager = [[PeopleListDatamanager alloc] init];
+        _dataManager.delegate = self;
     }
     return _dataManager;
 }
@@ -96,6 +105,13 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 0.0001f;
+}
+
+#pragma mark - PeopleListDatamanagerDelegate
+- (void)peopleListDatamanagerSuccess:(PeopleListDatamanager *)manager
+{
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView reloadData];
 }
 
 @end

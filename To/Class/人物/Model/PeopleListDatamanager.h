@@ -10,8 +10,16 @@
 #import "UserModel.h"
 #import <UIKit/UIKit.h>
 
+@class PeopleListDatamanager;
+@protocol PeopleListDatamanagerDelegate <NSObject>
+
+- (void)peopleListDatamanagerSuccess:(PeopleListDatamanager *)manager;
+
+@end
+
 @interface PeopleListDatamanager : NSObject
 
+@property(nonatomic, strong)id<PeopleListDatamanagerDelegate> delegate;
 // 返回组数
 - (NSInteger)numberOfSection;
 // 返回每组个数
@@ -20,5 +28,5 @@
 - (UserModel *)modelWithIndexPath:(NSIndexPath *)indexPath;
 // 返回分组索引数组
 - (NSArray *)indexArray;
-
+- (void)loadData;
 @end
