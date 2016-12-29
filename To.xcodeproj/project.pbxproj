@@ -22,6 +22,11 @@
 		3572B1C21E14DBFD00521111 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1C01E14DBFD00521111 /* YYWeakProxy.m */; };
 		3572B1C51E14DC8400521111 /* ToNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1C41E14DC8400521111 /* ToNavigationController.m */; };
 		3572B1C81E14DEDD00521111 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1C71E14DEDD00521111 /* UIColor+Hex.m */; };
+		3572B1CF1E15015300521111 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1CE1E15015300521111 /* UserModel.m */; };
+		3572B1D21E15017300521111 /* TitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1D11E15017300521111 /* TitleModel.m */; };
+		3572B1D51E1501A700521111 /* EventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1D41E1501A700521111 /* EventModel.m */; };
+		3572B1D71E15037C00521111 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3572B1D61E15037C00521111 /* CoreData.framework */; };
+		3572B1DD1E15087700521111 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1DB1E15087700521111 /* Model.xcdatamodeld */; };
 		35A89CE61E13B92100E2410A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A89CE51E13B92100E2410A /* main.m */; };
 		86E8E835B12C934CD2FA821E /* libPods-To.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9BBCE1C5506B8FA392CE40 /* libPods-To.a */; };
 /* End PBXBuildFile section */
@@ -56,6 +61,14 @@
 		3572B1C41E14DC8400521111 /* ToNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToNavigationController.m; sourceTree = "<group>"; };
 		3572B1C61E14DEDD00521111 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		3572B1C71E14DEDD00521111 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		3572B1CD1E15015300521111 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		3572B1CE1E15015300521111 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		3572B1D01E15017300521111 /* TitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleModel.h; sourceTree = "<group>"; };
+		3572B1D11E15017300521111 /* TitleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleModel.m; sourceTree = "<group>"; };
+		3572B1D31E1501A700521111 /* EventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventModel.h; sourceTree = "<group>"; };
+		3572B1D41E1501A700521111 /* EventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventModel.m; sourceTree = "<group>"; };
+		3572B1D61E15037C00521111 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3572B1DC1E15087700521111 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3572B1D71E15037C00521111 /* CoreData.framework in Frameworks */,
 				86E8E835B12C934CD2FA821E /* libPods-To.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +102,7 @@
 		3572B17B1E14A28B00521111 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				3572B1C91E14FEFB00521111 /* CoreData */,
 				3572B1BC1E14DBEA00521111 /* 公共 */,
 				3572B1931E14A2FF00521111 /* 侧滑 */,
 				3572B17C1E14A28B00521111 /* Other */,
@@ -248,6 +263,20 @@
 			path = "公共";
 			sourceTree = "<group>";
 		};
+		3572B1C91E14FEFB00521111 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3572B1CD1E15015300521111 /* UserModel.h */,
+				3572B1CE1E15015300521111 /* UserModel.m */,
+				3572B1D01E15017300521111 /* TitleModel.h */,
+				3572B1D11E15017300521111 /* TitleModel.m */,
+				3572B1D31E1501A700521111 /* EventModel.h */,
+				3572B1D41E1501A700521111 /* EventModel.m */,
+				3572B1DB1E15087700521111 /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		35A89CD81E13B92100E2410A = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +316,7 @@
 		7F13334A94BE81FBEAC1AF5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3572B1D61E15037C00521111 /* CoreData.framework */,
 				3572B1A31E14B05200521111 /* Photos.framework */,
 				6A9BBCE1C5506B8FA392CE40 /* libPods-To.a */,
 			);
@@ -420,13 +450,17 @@
 				3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */,
 				3572B1C11E14DBFD00521111 /* YYFPSLabel.m in Sources */,
 				3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */,
+				3572B1DD1E15087700521111 /* Model.xcdatamodeld in Sources */,
 				3572B1BB1E14DAE500521111 /* SidePanelViewController.m in Sources */,
 				3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */,
 				3572B1B51E14B1D900521111 /* LeftTableViewCell.m in Sources */,
 				3572B1C21E14DBFD00521111 /* YYWeakProxy.m in Sources */,
 				35A89CE61E13B92100E2410A /* main.m in Sources */,
+				3572B1D21E15017300521111 /* TitleModel.m in Sources */,
 				3572B19C1E14A33E00521111 /* PeopleListViewController.m in Sources */,
+				3572B1CF1E15015300521111 /* UserModel.m in Sources */,
 				3572B1C81E14DEDD00521111 /* UIColor+Hex.m in Sources */,
+				3572B1D51E1501A700521111 /* EventModel.m in Sources */,
 				3572B1B21E14B15700521111 /* UIViewController+JASidePanel.m in Sources */,
 				3572B1C51E14DC8400521111 /* ToNavigationController.m in Sources */,
 			);
@@ -584,6 +618,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3572B1DB1E15087700521111 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3572B1DC1E15087700521111 /* Model.xcdatamodel */,
+			);
+			currentVersion = 3572B1DC1E15087700521111 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 35A89CD91E13B92100E2410A /* Project object */;
 }

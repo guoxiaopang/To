@@ -13,6 +13,8 @@
 #import "LeftViewController.h"
 #import "YYFPSLabel.h"
 #import "ToNavigationController.h"
+#import <MagicalRecord/MagicalRecord.h>
+#import "UserModel.h"
 
 @interface AppDelegate ()
 
@@ -36,6 +38,9 @@
     YYFPSLabel *label = [[YYFPSLabel alloc] init];
     label.frame = CGRectMake(40, 20, 50, 30);
     [self.window addSubview:label];
+    
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"d.sqlite"];
+    //[self addUser];
     return YES;
 }
 
@@ -47,6 +52,36 @@
         _rootViewController.shouldDelegateAutorotateToVisiblePanel = NO;
     }
     return _rootViewController;
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    [MagicalRecord cleanUp];
+}
+
+- (void)addUser
+{
+    UserModel *model = [UserModel MR_createEntity];
+    model.name = @"q";
+    model.uuid = [NSUUID UUID].UUIDString;
+    
+    UserModel *model2 = [UserModel MR_createEntity];
+    model2.name = @"w";
+    model2.uuid = [NSUUID UUID].UUIDString;
+    
+    UserModel *model3 = [UserModel MR_createEntity];
+    model3.name = @"e";
+    model3.uuid = [NSUUID UUID].UUIDString;
+    
+    UserModel *model4 = [UserModel MR_createEntity];
+    model4.name = @"r";
+    model4.uuid = [NSUUID UUID].UUIDString;
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError * _Nullable error) {
+        NSLog(@"%@", @(contextDidSave));
+    }];
+    
+    NSArray *persons = [UserModel MR_findAll];
+    NSLog(@"----%lu", (unsigned long)persons.count);
 }
 
 @end
