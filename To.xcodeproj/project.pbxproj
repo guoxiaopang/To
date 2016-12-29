@@ -10,11 +10,12 @@
 		3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B17E1E14A28B00521111 /* AppDelegate.m */; };
 		3572B18F1E14A28B00521111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3572B17F1E14A28B00521111 /* Assets.xcassets */; };
 		3572B1901E14A28B00521111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3572B1801E14A28B00521111 /* LaunchScreen.storyboard */; };
-		3572B1981E14A2FF00521111 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1951E14A2FF00521111 /* JASidePanelController.m */; };
-		3572B1991E14A2FF00521111 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1971E14A2FF00521111 /* UIViewController+JASidePanel.m */; };
 		3572B19C1E14A33E00521111 /* PeopleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B19B1E14A33E00521111 /* PeopleListViewController.m */; };
 		3572B19F1E14A34900521111 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B19E1E14A34900521111 /* TodayViewController.m */; };
-		3572B1A21E14A59400521111 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1A11E14A59400521111 /* LeftViewController.m */; };
+		3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1A81E14B14C00521111 /* LeftViewController.m */; };
+		3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1AE1E14B15700521111 /* JASidePanelController.m */; };
+		3572B1B21E14B15700521111 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1B01E14B15700521111 /* UIViewController+JASidePanel.m */; };
+		3572B1B51E14B1D900521111 /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1B41E14B1D900521111 /* LeftTableViewCell.m */; };
 		35A89CE61E13B92100E2410A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A89CE51E13B92100E2410A /* main.m */; };
 		86E8E835B12C934CD2FA821E /* libPods-To.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9BBCE1C5506B8FA392CE40 /* libPods-To.a */; };
 /* End PBXBuildFile section */
@@ -24,16 +25,19 @@
 		3572B17E1E14A28B00521111 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3572B17F1E14A28B00521111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3572B1811E14A28B00521111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3572B1941E14A2FF00521111 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
-		3572B1951E14A2FF00521111 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
-		3572B1961E14A2FF00521111 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
-		3572B1971E14A2FF00521111 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
 		3572B19A1E14A33E00521111 /* PeopleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListViewController.h; sourceTree = "<group>"; };
 		3572B19B1E14A33E00521111 /* PeopleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListViewController.m; sourceTree = "<group>"; };
 		3572B19D1E14A34900521111 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		3572B19E1E14A34900521111 /* TodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		3572B1A01E14A59400521111 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
-		3572B1A11E14A59400521111 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		3572B1A31E14B05200521111 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		3572B1A71E14B14C00521111 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		3572B1A81E14B14C00521111 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		3572B1AD1E14B15700521111 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
+		3572B1AE1E14B15700521111 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
+		3572B1AF1E14B15700521111 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
+		3572B1B01E14B15700521111 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
+		3572B1B31E14B1D900521111 /* LeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableViewCell.h; sourceTree = "<group>"; };
+		3572B1B41E14B1D900521111 /* LeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,14 +158,56 @@
 		3572B1931E14A2FF00521111 /* 侧滑 */ = {
 			isa = PBXGroup;
 			children = (
-				3572B1941E14A2FF00521111 /* JASidePanelController.h */,
-				3572B1951E14A2FF00521111 /* JASidePanelController.m */,
-				3572B1961E14A2FF00521111 /* UIViewController+JASidePanel.h */,
-				3572B1971E14A2FF00521111 /* UIViewController+JASidePanel.m */,
-				3572B1A01E14A59400521111 /* LeftViewController.h */,
-				3572B1A11E14A59400521111 /* LeftViewController.m */,
+				3572B1AC1E14B15700521111 /* 第三方 */,
+				3572B1A51E14B14C00521111 /* 左边控制器 */,
 			);
 			path = "侧滑";
+			sourceTree = "<group>";
+		};
+		3572B1A51E14B14C00521111 /* 左边控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				3572B1A61E14B14C00521111 /* Controller */,
+				3572B1A91E14B14C00521111 /* Mode */,
+				3572B1AA1E14B14C00521111 /* View */,
+			);
+			path = "左边控制器";
+			sourceTree = "<group>";
+		};
+		3572B1A61E14B14C00521111 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3572B1A71E14B14C00521111 /* LeftViewController.h */,
+				3572B1A81E14B14C00521111 /* LeftViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3572B1A91E14B14C00521111 /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mode;
+			sourceTree = "<group>";
+		};
+		3572B1AA1E14B14C00521111 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3572B1B31E14B1D900521111 /* LeftTableViewCell.h */,
+				3572B1B41E14B1D900521111 /* LeftTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3572B1AC1E14B15700521111 /* 第三方 */ = {
+			isa = PBXGroup;
+			children = (
+				3572B1AD1E14B15700521111 /* JASidePanelController.h */,
+				3572B1AE1E14B15700521111 /* JASidePanelController.m */,
+				3572B1AF1E14B15700521111 /* UIViewController+JASidePanel.h */,
+				3572B1B01E14B15700521111 /* UIViewController+JASidePanel.m */,
+			);
+			path = "第三方";
 			sourceTree = "<group>";
 		};
 		35A89CD81E13B92100E2410A = {
@@ -203,6 +249,7 @@
 		7F13334A94BE81FBEAC1AF5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3572B1A31E14B05200521111 /* Photos.framework */,
 				6A9BBCE1C5506B8FA392CE40 /* libPods-To.a */,
 			);
 			name = Frameworks;
@@ -331,12 +378,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3572B19F1E14A34900521111 /* TodayViewController.m in Sources */,
+				3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */,
+				3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */,
 				3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */,
-				3572B1991E14A2FF00521111 /* UIViewController+JASidePanel.m in Sources */,
+				3572B1B51E14B1D900521111 /* LeftTableViewCell.m in Sources */,
 				35A89CE61E13B92100E2410A /* main.m in Sources */,
-				3572B1A21E14A59400521111 /* LeftViewController.m in Sources */,
 				3572B19C1E14A33E00521111 /* PeopleListViewController.m in Sources */,
-				3572B1981E14A2FF00521111 /* JASidePanelController.m in Sources */,
+				3572B1B21E14B15700521111 /* UIViewController+JASidePanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

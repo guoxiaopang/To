@@ -26,7 +26,7 @@
     self.rootViewController.shouldDelegateAutorotateToVisiblePanel = NO;
     PeopleListViewController *listVC = [[PeopleListViewController alloc] init];
     LeftViewController *leftVC = [[LeftViewController alloc] init];
-    self.rootViewController.leftPanel = [[UINavigationController alloc] initWithRootViewController:leftVC];
+    self.rootViewController.leftPanel = leftVC;
     self.rootViewController.centerPanel = listVC;
     
     self.window.rootViewController = self.rootViewController;
