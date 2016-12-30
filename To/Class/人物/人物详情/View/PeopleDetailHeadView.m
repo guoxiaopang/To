@@ -37,6 +37,8 @@
     if (!_nameLabel)
     {
         _nameLabel = [[UILabel alloc] init];
+        _nameLabel.text = @"狗蛋";
+        _nameLabel.textColor = [UIColor whiteColor];
     }
     return _nameLabel;
 }
@@ -60,6 +62,11 @@
         make.centerX.equalTo(self);
         make.top.equalTo(self).offset(50);
         make.width.height.equalTo(@150);
+    }];
+    
+    [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self);
+        make.top.equalTo(_iconView.mas_bottom).offset(20);
     }];
 }
 

@@ -22,6 +22,7 @@ static NSString *peopleDetailSectionViewIdent = @"peopleDetailSectionViewIdent";
 @property(nonatomic, strong)UITableView *tableView;
 @property(nonatomic, strong)PeopleDetailDataManager *dataManager;
 @property(nonatomic, strong)PeopleDetailHeadView *headView;
+@property(nonatomic, strong)UIBarButtonItem *rightBarButtonItem;
 
 @end
 
@@ -31,14 +32,24 @@ static NSString *peopleDetailSectionViewIdent = @"peopleDetailSectionViewIdent";
 {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-    self.tabBarItem.title = @"人物详情";
-    //self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.navigationItem.title = @"人物详情";
     self.automaticallyAdjustsScrollViewInsets = NO;
-    //_tableView.backgroundColor = [UIColor redColor];
-    //self.view.backgroundColor = [UIColor colorWithHex:0X5677FC];
+    UINavigationBar *bar = self.navigationController.navigationBar;
+    [bar setShadowImage:[[UIImage alloc] init]];
+    self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
 }
 
 #pragma mark - 懒加载
+- (UIBarButtonItem *)rightBarButtonItem
+{
+    if (!_rightBarButtonItem)
+    {
+        _rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:nil];
+        _rightBarButtonItem.tintColor = [UIColor whiteColor];
+    }
+    return _rightBarButtonItem;
+}
+
 - (PeopleDetailHeadView *)headView
 {
     if (!_headView)
