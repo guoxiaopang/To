@@ -8,12 +8,13 @@
         <attribute name="attributeArray" optional="YES" attributeType="Transformable" customClassName="NSArray" syncable="YES"/>
         <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventArray" optional="YES" attributeType="Transformable" customClassName="NSArray" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="typeArray" optional="YES" attributeType="Transformable" customClassName="NSArray" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UserModel" positionX="-306" positionY="-144" width="128" height="133"/>
         <element name="UserGroup" positionX="-99" positionY="-99" width="128" height="73"/>
+        <element name="UserModel" positionX="-306" positionY="-144" width="128" height="150"/>
     </elements>
 </model>

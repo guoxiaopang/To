@@ -105,7 +105,7 @@
     
     _nameLabel.text = model.name;
 
-    [_iconView yy_setImageWithURL:[NSURL URLWithString:@"http://note.youdao.com/yws/public/resource/9f6745325c19d211a09cfeaffcddcc45/xmlnote/WEBRESOURCE543e0891b28a3178f15ad47ecd820753/1009"] placeholder:self.placeholderImage options:YYWebImageOptionShowNetworkActivity progress:nil transform:^UIImage *(UIImage * image, NSURL * url) {
+    [_iconView yy_setImageWithURL:[NSURL URLWithString:model.icon] placeholder:self.placeholderImage options:YYWebImageOptionShowNetworkActivity progress:nil transform:^UIImage *(UIImage * image, NSURL * url) {
         image = [image yy_imageByRoundCornerRadius: image.size.width/2];
         return image;
     } completion:nil];

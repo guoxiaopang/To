@@ -17,5 +17,6 @@
 @dynamic typeArray;
 @dynamic eventArray;
 @dynamic uuid;
+@dynamic icon;
 
 @end

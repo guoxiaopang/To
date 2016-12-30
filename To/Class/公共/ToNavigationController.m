@@ -44,7 +44,7 @@
         [backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         [backButton sizeToFit];
         [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-        backButton.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+        backButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
         viewController.hidesBottomBarWhenPushed = YES; // 隐藏底部的工具条
     }

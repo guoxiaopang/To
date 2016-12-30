@@ -13,6 +13,8 @@
 
 // 姓名
 @property(nonatomic, strong) NSString *name;
+// 头像
+@property(nonatomic, strong) NSString *icon;
 // 唯一UUID
 @property(nonatomic, strong) NSString *uuid;
 // 生日

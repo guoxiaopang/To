@@ -10,7 +10,6 @@
 		3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B17E1E14A28B00521111 /* AppDelegate.m */; };
 		3572B18F1E14A28B00521111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3572B17F1E14A28B00521111 /* Assets.xcassets */; };
 		3572B1901E14A28B00521111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3572B1801E14A28B00521111 /* LaunchScreen.storyboard */; };
-		3572B19C1E14A33E00521111 /* PeopleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B19B1E14A33E00521111 /* PeopleListViewController.m */; };
 		3572B19F1E14A34900521111 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B19E1E14A34900521111 /* TodayViewController.m */; };
 		3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1A81E14B14C00521111 /* LeftViewController.m */; };
 		3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1AE1E14B15700521111 /* JASidePanelController.m */; };
@@ -27,10 +26,12 @@
 		3572B1D51E1501A700521111 /* EventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1D41E1501A700521111 /* EventModel.m */; };
 		3572B1D71E15037C00521111 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3572B1D61E15037C00521111 /* CoreData.framework */; };
 		3572B1DD1E15087700521111 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1DB1E15087700521111 /* Model.xcdatamodeld */; };
-		3572B1E31E150AF300521111 /* PeopleListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1E21E150AF300521111 /* PeopleListTableViewCell.m */; };
-		3572B1E61E15125200521111 /* PeopleListDatamanager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1E51E15125200521111 /* PeopleListDatamanager.m */; };
 		3572B1EC1E1514D000521111 /* UserGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1EB1E1514D000521111 /* UserGroup.m */; };
 		3572B1EF1E15153600521111 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B1EE1E15153600521111 /* UserManager.m */; };
+		357915591E163C8A005C0F0A /* PeopleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3579154E1E163C8A005C0F0A /* PeopleListViewController.m */; };
+		3579155A1E163C8A005C0F0A /* PeopleListDatamanager.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915511E163C8A005C0F0A /* PeopleListDatamanager.m */; };
+		3579155B1E163C8A005C0F0A /* PeopleListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915541E163C8A005C0F0A /* PeopleListTableViewCell.m */; };
+		3579155E1E163CA5005C0F0A /* PeopleAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3579155D1E163CA5005C0F0A /* PeopleAddViewController.m */; };
 		35A89CE61E13B92100E2410A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A89CE51E13B92100E2410A /* main.m */; };
 		386BC0B1104AF437AB282375 /* Pods_To.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE10E152DAB51DF8A88BFE6 /* Pods_To.framework */; };
 /* End PBXBuildFile section */
@@ -40,8 +41,6 @@
 		3572B17E1E14A28B00521111 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3572B17F1E14A28B00521111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3572B1811E14A28B00521111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3572B19A1E14A33E00521111 /* PeopleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListViewController.h; sourceTree = "<group>"; };
-		3572B19B1E14A33E00521111 /* PeopleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListViewController.m; sourceTree = "<group>"; };
 		3572B19D1E14A34900521111 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		3572B19E1E14A34900521111 /* TodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		3572B1A31E14B05200521111 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -73,14 +72,18 @@
 		3572B1D41E1501A700521111 /* EventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventModel.m; sourceTree = "<group>"; };
 		3572B1D61E15037C00521111 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3572B1DC1E15087700521111 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		3572B1E11E150AF300521111 /* PeopleListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListTableViewCell.h; sourceTree = "<group>"; };
-		3572B1E21E150AF300521111 /* PeopleListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListTableViewCell.m; sourceTree = "<group>"; };
-		3572B1E41E15125100521111 /* PeopleListDatamanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListDatamanager.h; sourceTree = "<group>"; };
-		3572B1E51E15125200521111 /* PeopleListDatamanager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListDatamanager.m; sourceTree = "<group>"; };
 		3572B1EA1E1514D000521111 /* UserGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGroup.h; sourceTree = "<group>"; };
 		3572B1EB1E1514D000521111 /* UserGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGroup.m; sourceTree = "<group>"; };
 		3572B1ED1E15153600521111 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		3572B1EE1E15153600521111 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		3579154D1E163C8A005C0F0A /* PeopleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListViewController.h; sourceTree = "<group>"; };
+		3579154E1E163C8A005C0F0A /* PeopleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListViewController.m; sourceTree = "<group>"; };
+		357915501E163C8A005C0F0A /* PeopleListDatamanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListDatamanager.h; sourceTree = "<group>"; };
+		357915511E163C8A005C0F0A /* PeopleListDatamanager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListDatamanager.m; sourceTree = "<group>"; };
+		357915531E163C8A005C0F0A /* PeopleListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListTableViewCell.h; sourceTree = "<group>"; };
+		357915541E163C8A005C0F0A /* PeopleListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListTableViewCell.m; sourceTree = "<group>"; };
+		3579155C1E163CA5005C0F0A /* PeopleAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleAddViewController.h; sourceTree = "<group>"; };
+		3579155D1E163CA5005C0F0A /* PeopleAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleAddViewController.m; sourceTree = "<group>"; };
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,38 +141,10 @@
 		3572B1861E14A28B00521111 /* 人物 */ = {
 			isa = PBXGroup;
 			children = (
-				3572B1871E14A28B00521111 /* Controller */,
-				3572B1881E14A28B00521111 /* Model */,
-				3572B1891E14A28B00521111 /* View */,
+				3579154B1E163C8A005C0F0A /* 联系人列表 */,
+				357915551E163C8A005C0F0A /* 增加联系人 */,
 			);
 			path = "人物";
-			sourceTree = "<group>";
-		};
-		3572B1871E14A28B00521111 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				3572B19A1E14A33E00521111 /* PeopleListViewController.h */,
-				3572B19B1E14A33E00521111 /* PeopleListViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		3572B1881E14A28B00521111 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3572B1E41E15125100521111 /* PeopleListDatamanager.h */,
-				3572B1E51E15125200521111 /* PeopleListDatamanager.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		3572B1891E14A28B00521111 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3572B1E11E150AF300521111 /* PeopleListTableViewCell.h */,
-				3572B1E21E150AF300521111 /* PeopleListTableViewCell.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		3572B18A1E14A28B00521111 /* 今天事件 */ = {
@@ -295,6 +270,76 @@
 				3572B1EE1E15153600521111 /* UserManager.m */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3579154B1E163C8A005C0F0A /* 联系人列表 */ = {
+			isa = PBXGroup;
+			children = (
+				3579154C1E163C8A005C0F0A /* Controller */,
+				3579154F1E163C8A005C0F0A /* Model */,
+				357915521E163C8A005C0F0A /* View */,
+			);
+			path = "联系人列表";
+			sourceTree = "<group>";
+		};
+		3579154C1E163C8A005C0F0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3579154D1E163C8A005C0F0A /* PeopleListViewController.h */,
+				3579154E1E163C8A005C0F0A /* PeopleListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3579154F1E163C8A005C0F0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				357915501E163C8A005C0F0A /* PeopleListDatamanager.h */,
+				357915511E163C8A005C0F0A /* PeopleListDatamanager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		357915521E163C8A005C0F0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				357915531E163C8A005C0F0A /* PeopleListTableViewCell.h */,
+				357915541E163C8A005C0F0A /* PeopleListTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		357915551E163C8A005C0F0A /* 增加联系人 */ = {
+			isa = PBXGroup;
+			children = (
+				357915561E163C8A005C0F0A /* Controller */,
+				357915571E163C8A005C0F0A /* Model */,
+				357915581E163C8A005C0F0A /* View */,
+			);
+			path = "增加联系人";
+			sourceTree = "<group>";
+		};
+		357915561E163C8A005C0F0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3579155C1E163CA5005C0F0A /* PeopleAddViewController.h */,
+				3579155D1E163CA5005C0F0A /* PeopleAddViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		357915571E163C8A005C0F0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		357915581E163C8A005C0F0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		35A89CD81E13B92100E2410A = {
@@ -467,23 +512,24 @@
 			files = (
 				3572B19F1E14A34900521111 /* TodayViewController.m in Sources */,
 				3572B1B81E14BE9F00521111 /* LeftHeadView.m in Sources */,
-				3572B1E31E150AF300521111 /* PeopleListTableViewCell.m in Sources */,
 				3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */,
 				3572B1EF1E15153600521111 /* UserManager.m in Sources */,
 				3572B1C11E14DBFD00521111 /* YYFPSLabel.m in Sources */,
 				3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */,
+				3579155B1E163C8A005C0F0A /* PeopleListTableViewCell.m in Sources */,
+				3579155E1E163CA5005C0F0A /* PeopleAddViewController.m in Sources */,
 				3572B1DD1E15087700521111 /* Model.xcdatamodeld in Sources */,
+				3579155A1E163C8A005C0F0A /* PeopleListDatamanager.m in Sources */,
 				3572B1BB1E14DAE500521111 /* SidePanelViewController.m in Sources */,
 				3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */,
 				3572B1B51E14B1D900521111 /* LeftTableViewCell.m in Sources */,
 				3572B1C21E14DBFD00521111 /* YYWeakProxy.m in Sources */,
 				35A89CE61E13B92100E2410A /* main.m in Sources */,
 				3572B1D21E15017300521111 /* TitleModel.m in Sources */,
+				357915591E163C8A005C0F0A /* PeopleListViewController.m in Sources */,
 				3572B1EC1E1514D000521111 /* UserGroup.m in Sources */,
-				3572B19C1E14A33E00521111 /* PeopleListViewController.m in Sources */,
 				3572B1CF1E15015300521111 /* UserModel.m in Sources */,
 				3572B1C81E14DEDD00521111 /* UIColor+Hex.m in Sources */,
-				3572B1E61E15125200521111 /* PeopleListDatamanager.m in Sources */,
 				3572B1D51E1501A700521111 /* EventModel.m in Sources */,
 				3572B1B21E14B15700521111 /* UIViewController+JASidePanel.m in Sources */,
 				3572B1C51E14DC8400521111 /* ToNavigationController.m in Sources */,

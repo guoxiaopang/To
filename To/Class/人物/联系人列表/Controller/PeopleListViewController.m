@@ -12,6 +12,8 @@
 #import "UIColor+Hex.h"
 #import "PeopleListDatamanager.h"
 #import <MJRefresh/MJRefresh.h>
+#import "PeopleAddViewController.h"
+#import "ToNavigationController.h"
 
 static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 @interface PeopleListViewController ()<UITableViewDelegate, UITableViewDataSource, PeopleListDatamanagerDelegate>
@@ -19,6 +21,7 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) PeopleListDatamanager *dataManager;
 @property(nonatomic, strong) MJRefreshHeader *refreshHeader;
+@property(nonatomic,strong) UIBarButtonItem *rightBarButtonItem;
 
 @end
 
@@ -35,10 +38,18 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
         [self.dataManager loadData];
     }];
     [self.tableView.mj_header beginRefreshing];
-   
+    self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
 }
 
 #pragma mark 懒加载
+- (UIBarButtonItem *)rightBarButtonItem
+{
+    if (!_rightBarButtonItem)
+    {
+        _rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"add"] style:UIBarButtonItemStylePlain target:self action:@selector(pushAddController)];
+    }
+    return _rightBarButtonItem;
+}
 
 - (PeopleListDatamanager *)dataManager
 {
@@ -114,4 +125,12 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
     [self.tableView reloadData];
 }
 
+#pragma mark - Void
+- (void)pushAddController
+{
+    PeopleAddViewController *controller = [[PeopleAddViewController alloc] init];
+    ToNavigationController *navigationVC = [[ToNavigationController alloc] initWithRootViewController:controller];
+    [self presentViewController:navigationVC animated:YES completion:nil];
+    //[self.navigationController pushViewController:controller animated:YES];
+}
 @end
