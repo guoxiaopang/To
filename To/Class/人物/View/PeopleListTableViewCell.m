@@ -8,12 +8,14 @@
 
 #import "PeopleListTableViewCell.h"
 #import "Masonry.h"
+#import "YYWebImage.h"
 
 @interface PeopleListTableViewCell()
 
 @property (nonatomic, strong) UIImageView *iconView;
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UIButton *markButton;
+@property (nonatomic, strong) UIImage *placeholderImage;
 
 @end
 
@@ -34,6 +36,16 @@
 }
 
 #pragma mark - 懒加载
+- (UIImage *)placeholderImage
+{
+    if (!_placeholderImage)
+    {
+        _placeholderImage = [UIImage imageNamed:@"icon"];
+        _placeholderImage = [_placeholderImage yy_imageByRoundCornerRadius: _placeholderImage.size.width/2];
+    }
+    return _placeholderImage;
+}
+
 - (UIImageView *)iconView
 {
     if (!_iconView)
@@ -90,7 +102,14 @@
 
 - (void)reloadData:(UserModel *)model
 {
+    
     _nameLabel.text = model.name;
+
+    [_iconView yy_setImageWithURL:[NSURL URLWithString:@"http://note.youdao.com/yws/public/resource/9f6745325c19d211a09cfeaffcddcc45/xmlnote/WEBRESOURCE543e0891b28a3178f15ad47ecd820753/1009"] placeholder:self.placeholderImage options:YYWebImageOptionShowNetworkActivity progress:nil transform:^UIImage *(UIImage * image, NSURL * url) {
+        image = [image yy_imageByRoundCornerRadius: image.size.width/2];
+        return image;
+    } completion:nil];
+    
 }
 
 @end
