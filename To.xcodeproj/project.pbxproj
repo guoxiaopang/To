@@ -32,6 +32,12 @@
 		3579155A1E163C8A005C0F0A /* PeopleListDatamanager.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915511E163C8A005C0F0A /* PeopleListDatamanager.m */; };
 		3579155B1E163C8A005C0F0A /* PeopleListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915541E163C8A005C0F0A /* PeopleListTableViewCell.m */; };
 		3579155E1E163CA5005C0F0A /* PeopleAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3579155D1E163CA5005C0F0A /* PeopleAddViewController.m */; };
+		357915651E16457E005C0F0A /* PeopleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915641E16457E005C0F0A /* PeopleDetailController.m */; };
+		357915681E164703005C0F0A /* PeopleDetailNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915671E164703005C0F0A /* PeopleDetailNormalTableViewCell.m */; };
+		3579156B1E1647B3005C0F0A /* PeopleDetailDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3579156A1E1647B3005C0F0A /* PeopleDetailDataManager.m */; };
+		3579156E1E1648C2005C0F0A /* PeopleDetailInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3579156D1E1648C2005C0F0A /* PeopleDetailInfoModel.m */; };
+		357915741E1657B4005C0F0A /* PeopleDetailSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915731E1657B4005C0F0A /* PeopleDetailSectionView.m */; };
+		357915771E166012005C0F0A /* PeopleDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915761E166012005C0F0A /* PeopleDetailHeadView.m */; };
 		35A89CE61E13B92100E2410A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A89CE51E13B92100E2410A /* main.m */; };
 		386BC0B1104AF437AB282375 /* Pods_To.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE10E152DAB51DF8A88BFE6 /* Pods_To.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +90,20 @@
 		357915541E163C8A005C0F0A /* PeopleListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListTableViewCell.m; sourceTree = "<group>"; };
 		3579155C1E163CA5005C0F0A /* PeopleAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleAddViewController.h; sourceTree = "<group>"; };
 		3579155D1E163CA5005C0F0A /* PeopleAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleAddViewController.m; sourceTree = "<group>"; };
+		357915631E16457E005C0F0A /* PeopleDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailController.h; sourceTree = "<group>"; };
+		357915641E16457E005C0F0A /* PeopleDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailController.m; sourceTree = "<group>"; };
+		357915661E164703005C0F0A /* PeopleDetailNormalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailNormalTableViewCell.h; sourceTree = "<group>"; };
+		357915671E164703005C0F0A /* PeopleDetailNormalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailNormalTableViewCell.m; sourceTree = "<group>"; };
+		357915691E1647B3005C0F0A /* PeopleDetailDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailDataManager.h; sourceTree = "<group>"; };
+		3579156A1E1647B3005C0F0A /* PeopleDetailDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailDataManager.m; sourceTree = "<group>"; };
+		3579156C1E1648C2005C0F0A /* PeopleDetailInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailInfoModel.h; sourceTree = "<group>"; };
+		3579156D1E1648C2005C0F0A /* PeopleDetailInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailInfoModel.m; sourceTree = "<group>"; };
+		357915701E165228005C0F0A /* PingFang-SC-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang-SC-UltraLight.ttf"; sourceTree = "<group>"; };
+		357915711E16535C005C0F0A /* 苹方 细体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "苹方 细体.ttf"; sourceTree = "<group>"; };
+		357915721E1657B4005C0F0A /* PeopleDetailSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailSectionView.h; sourceTree = "<group>"; };
+		357915731E1657B4005C0F0A /* PeopleDetailSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailSectionView.m; sourceTree = "<group>"; };
+		357915751E166012005C0F0A /* PeopleDetailHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailHeadView.h; sourceTree = "<group>"; };
+		357915761E166012005C0F0A /* PeopleDetailHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailHeadView.m; sourceTree = "<group>"; };
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,6 +150,8 @@
 		3572B17C1E14A28B00521111 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				357915711E16535C005C0F0A /* 苹方 细体.ttf */,
+				357915701E165228005C0F0A /* PingFang-SC-UltraLight.ttf */,
 				3572B17D1E14A28B00521111 /* AppDelegate.h */,
 				3572B17E1E14A28B00521111 /* AppDelegate.m */,
 				3572B17F1E14A28B00521111 /* Assets.xcassets */,
@@ -141,6 +163,7 @@
 		3572B1861E14A28B00521111 /* 人物 */ = {
 			isa = PBXGroup;
 			children = (
+				3579155F1E164569005C0F0A /* 人物详情 */,
 				3579154B1E163C8A005C0F0A /* 联系人列表 */,
 				357915551E163C8A005C0F0A /* 增加联系人 */,
 			);
@@ -342,6 +365,49 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3579155F1E164569005C0F0A /* 人物详情 */ = {
+			isa = PBXGroup;
+			children = (
+				357915601E164569005C0F0A /* Controller */,
+				357915611E164569005C0F0A /* Model */,
+				357915621E164569005C0F0A /* View */,
+			);
+			path = "人物详情";
+			sourceTree = "<group>";
+		};
+		357915601E164569005C0F0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				357915631E16457E005C0F0A /* PeopleDetailController.h */,
+				357915641E16457E005C0F0A /* PeopleDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		357915611E164569005C0F0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				357915691E1647B3005C0F0A /* PeopleDetailDataManager.h */,
+				3579156A1E1647B3005C0F0A /* PeopleDetailDataManager.m */,
+				3579156C1E1648C2005C0F0A /* PeopleDetailInfoModel.h */,
+				3579156D1E1648C2005C0F0A /* PeopleDetailInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		357915621E164569005C0F0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				357915661E164703005C0F0A /* PeopleDetailNormalTableViewCell.h */,
+				357915671E164703005C0F0A /* PeopleDetailNormalTableViewCell.m */,
+				357915721E1657B4005C0F0A /* PeopleDetailSectionView.h */,
+				357915731E1657B4005C0F0A /* PeopleDetailSectionView.m */,
+				357915751E166012005C0F0A /* PeopleDetailHeadView.h */,
+				357915761E166012005C0F0A /* PeopleDetailHeadView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		35A89CD81E13B92100E2410A = {
 			isa = PBXGroup;
 			children = (
@@ -514,6 +580,8 @@
 				3572B1B81E14BE9F00521111 /* LeftHeadView.m in Sources */,
 				3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */,
 				3572B1EF1E15153600521111 /* UserManager.m in Sources */,
+				357915741E1657B4005C0F0A /* PeopleDetailSectionView.m in Sources */,
+				3579156E1E1648C2005C0F0A /* PeopleDetailInfoModel.m in Sources */,
 				3572B1C11E14DBFD00521111 /* YYFPSLabel.m in Sources */,
 				3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */,
 				3579155B1E163C8A005C0F0A /* PeopleListTableViewCell.m in Sources */,
@@ -526,13 +594,17 @@
 				3572B1C21E14DBFD00521111 /* YYWeakProxy.m in Sources */,
 				35A89CE61E13B92100E2410A /* main.m in Sources */,
 				3572B1D21E15017300521111 /* TitleModel.m in Sources */,
+				357915771E166012005C0F0A /* PeopleDetailHeadView.m in Sources */,
 				357915591E163C8A005C0F0A /* PeopleListViewController.m in Sources */,
+				3579156B1E1647B3005C0F0A /* PeopleDetailDataManager.m in Sources */,
 				3572B1EC1E1514D000521111 /* UserGroup.m in Sources */,
 				3572B1CF1E15015300521111 /* UserModel.m in Sources */,
 				3572B1C81E14DEDD00521111 /* UIColor+Hex.m in Sources */,
 				3572B1D51E1501A700521111 /* EventModel.m in Sources */,
 				3572B1B21E14B15700521111 /* UIViewController+JASidePanel.m in Sources */,
 				3572B1C51E14DC8400521111 /* ToNavigationController.m in Sources */,
+				357915651E16457E005C0F0A /* PeopleDetailController.m in Sources */,
+				357915681E164703005C0F0A /* PeopleDetailNormalTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

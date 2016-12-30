@@ -14,6 +14,7 @@
 #import <MJRefresh/MJRefresh.h>
 #import "PeopleAddViewController.h"
 #import "ToNavigationController.h"
+#import "PeopleDetailController.h"
 
 static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 @interface PeopleListViewController ()<UITableViewDelegate, UITableViewDataSource, PeopleListDatamanagerDelegate>
@@ -110,6 +111,8 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    PeopleDetailController *controller = [[PeopleDetailController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
