@@ -40,9 +40,11 @@
 		357915741E1657B4005C0F0A /* PeopleDetailSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915731E1657B4005C0F0A /* PeopleDetailSectionView.m */; };
 		357915771E166012005C0F0A /* PeopleDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915761E166012005C0F0A /* PeopleDetailHeadView.m */; };
 		35A89CE61E13B92100E2410A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A89CE51E13B92100E2410A /* main.m */; };
-		35B5954B1E1BAD100013B366 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B5954A1E1BAD100013B366 /* Tag.m */; };
+		35B5954B1E1BAD100013B366 /* TagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B5954A1E1BAD100013B366 /* TagModel.m */; };
 		35B5954E1E1BC0480013B366 /* PeopleDetailTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B5954D1E1BC0480013B366 /* PeopleDetailTagManager.m */; };
 		35B595511E1BC5480013B366 /* PeopleDetailTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B595501E1BC5480013B366 /* PeopleDetailTagCell.m */; };
+		35B595541E1BCDB20013B366 /* PeopleDetailThingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B595531E1BCDB20013B366 /* PeopleDetailThingTableViewCell.m */; };
+		35B595571E1BCEE20013B366 /* ThingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B595561E1BCEE20013B366 /* ThingModel.m */; };
 		386BC0B1104AF437AB282375 /* Pods_To.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE10E152DAB51DF8A88BFE6 /* Pods_To.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,12 +115,16 @@
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35B595491E1BAD100013B366 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
-		35B5954A1E1BAD100013B366 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		35B595491E1BAD100013B366 /* TagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagModel.h; sourceTree = "<group>"; };
+		35B5954A1E1BAD100013B366 /* TagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagModel.m; sourceTree = "<group>"; };
 		35B5954C1E1BC0480013B366 /* PeopleDetailTagManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailTagManager.h; sourceTree = "<group>"; };
 		35B5954D1E1BC0480013B366 /* PeopleDetailTagManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailTagManager.m; sourceTree = "<group>"; };
 		35B5954F1E1BC5480013B366 /* PeopleDetailTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailTagCell.h; sourceTree = "<group>"; };
 		35B595501E1BC5480013B366 /* PeopleDetailTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailTagCell.m; sourceTree = "<group>"; };
+		35B595521E1BCDB20013B366 /* PeopleDetailThingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailThingTableViewCell.h; sourceTree = "<group>"; };
+		35B595531E1BCDB20013B366 /* PeopleDetailThingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailThingTableViewCell.m; sourceTree = "<group>"; };
+		35B595551E1BCEE20013B366 /* ThingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThingModel.h; sourceTree = "<group>"; };
+		35B595561E1BCEE20013B366 /* ThingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThingModel.m; sourceTree = "<group>"; };
 		38B5F052C9FB9A612DC8CBB5 /* Pods-To.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To.release.xcconfig"; path = "Pods/Target Support Files/Pods-To/Pods-To.release.xcconfig"; sourceTree = "<group>"; };
 		8BE10E152DAB51DF8A88BFE6 /* Pods_To.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8F601A3EC5A6AFB0E3D008 /* Pods-To.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To/Pods-To.debug.xcconfig"; sourceTree = "<group>"; };
@@ -303,8 +309,10 @@
 				3572B1EB1E1514D000521111 /* UserGroup.m */,
 				3572B1ED1E15153600521111 /* UserManager.h */,
 				3572B1EE1E15153600521111 /* UserManager.m */,
-				35B595491E1BAD100013B366 /* Tag.h */,
-				35B5954A1E1BAD100013B366 /* Tag.m */,
+				35B595491E1BAD100013B366 /* TagModel.h */,
+				35B5954A1E1BAD100013B366 /* TagModel.m */,
+				35B595551E1BCEE20013B366 /* ThingModel.h */,
+				35B595561E1BCEE20013B366 /* ThingModel.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -424,6 +432,8 @@
 				350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */,
 				35B5954F1E1BC5480013B366 /* PeopleDetailTagCell.h */,
 				35B595501E1BC5480013B366 /* PeopleDetailTagCell.m */,
+				35B595521E1BCDB20013B366 /* PeopleDetailThingTableViewCell.h */,
+				35B595531E1BCDB20013B366 /* PeopleDetailThingTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -596,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B595571E1BCEE20013B366 /* ThingModel.m in Sources */,
 				3572B19F1E14A34900521111 /* TodayViewController.m in Sources */,
 				3572B1B81E14BE9F00521111 /* LeftHeadView.m in Sources */,
 				35B5954E1E1BC0480013B366 /* PeopleDetailTagManager.m in Sources */,
@@ -608,6 +619,7 @@
 				3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */,
 				3579155B1E163C8A005C0F0A /* PeopleListTableViewCell.m in Sources */,
 				3579155E1E163CA5005C0F0A /* PeopleAddViewController.m in Sources */,
+				35B595541E1BCDB20013B366 /* PeopleDetailThingTableViewCell.m in Sources */,
 				3572B1DD1E15087700521111 /* Model.xcdatamodeld in Sources */,
 				3579155A1E163C8A005C0F0A /* PeopleListDatamanager.m in Sources */,
 				3572B1BB1E14DAE500521111 /* SidePanelViewController.m in Sources */,
@@ -628,7 +640,7 @@
 				3572B1C51E14DC8400521111 /* ToNavigationController.m in Sources */,
 				357915651E16457E005C0F0A /* PeopleDetailController.m in Sources */,
 				357915681E164703005C0F0A /* PeopleDetailNormalTableViewCell.m in Sources */,
-				35B5954B1E1BAD100013B366 /* Tag.m in Sources */,
+				35B5954B1E1BAD100013B366 /* TagModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

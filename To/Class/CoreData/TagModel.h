@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface Tag : NSManagedObject
+@interface TagModel : NSManagedObject
 
 // 标签id
 @property(nonatomic, strong) NSString *tagId;

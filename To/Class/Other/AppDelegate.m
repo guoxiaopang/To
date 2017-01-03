@@ -15,7 +15,7 @@
 #import "ToNavigationController.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import "UserManager.h"
-#import "Tag.h"
+#import "TagModel.h"
 
 @interface AppDelegate ()
 
@@ -62,23 +62,23 @@
 
 - (void)addUser
 {
-    Tag *tag1 = [Tag MR_createEntity];
+    TagModel *tag1 = [TagModel MR_createEntity];
     tag1.tagId = [NSUUID UUID].UUIDString;
     tag1.tagName = @"逗比";
     
-    Tag *tag2 = [Tag MR_createEntity];
+    TagModel *tag2 = [TagModel MR_createEntity];
     tag2.tagId = [NSUUID UUID].UUIDString;
     tag2.tagName = @"事情1";
     
-    Tag *tag3 = [Tag MR_createEntity];
+    TagModel *tag3 = [TagModel MR_createEntity];
     tag3.tagId = [NSUUID UUID].UUIDString;
     tag3.tagName = @"属性2";
     
-    Tag *tag4 = [Tag MR_createEntity];
+    TagModel *tag4 = [TagModel MR_createEntity];
     tag4.tagId = [NSUUID UUID].UUIDString;
     tag4.tagName = @"属性3";
     
-    Tag *tag5 = [Tag MR_createEntity];
+    TagModel *tag5 = [TagModel MR_createEntity];
     tag5.tagId = [NSUUID UUID].UUIDString;
     tag5.tagName = @"属性4";
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];

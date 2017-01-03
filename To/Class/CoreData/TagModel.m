@@ -6,9 +6,9 @@
 //  Copyright © 2017年 duoyi. All rights reserved.
 //
 
-#import "Tag.h"
+#import "TagModel.h"
 
-@implementation Tag
+@implementation TagModel
 
 @dynamic tagId;
 @dynamic tagName;

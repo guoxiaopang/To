@@ -17,12 +17,14 @@
 #import "PeopleDetailNormalEditTableViewCell.h"
 #import "PeopleDetailTagManager.h"
 #import "PeopleDetailTagCell.h"
+#import "PeopleDetailThingTableViewCell.h"
 
 static NSString *peopleDetailNormalTableViewCellIdent = @"peopleDetailNormalTableViewCellIdent";
 static NSString *peopleDetailSectionViewIdent = @"peopleDetailSectionViewIdent";
 static NSString *peopleDetailendCell = @"peopleDetailendCell";
 static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
 static NSString *peopleDetailTagCellIdent = @"PeopleDetailTagCellIdent";
+static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableViewCellIdent";
 
 @interface PeopleDetailController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -95,6 +97,7 @@ static NSString *peopleDetailTagCellIdent = @"PeopleDetailTagCellIdent";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:peopleDetailendCell];
     [self.tableView registerClass:[PeopleDetailNormalEditTableViewCell class] forCellReuseIdentifier:peopleDetailEditCell];
   //  [self.tableView registerClass:[PeopleDetailTagCell class] forCellReuseIdentifier:peopleDetailTagCellIdent];
+    [self.tableView registerClass:[PeopleDetailThingTableViewCell class] forCellReuseIdentifier:peopleDetailThingTableViewCellIdent];
     self.tableView.showsVerticalScrollIndicator = false;
     self.tableView.tableHeaderView = self.headView;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
@@ -188,7 +191,7 @@ static NSString *peopleDetailTagCellIdent = @"PeopleDetailTagCellIdent";
     }
     else
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailendCell];
+        PeopleDetailThingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailThingTableViewCellIdent];
         return cell;
     }
 }
