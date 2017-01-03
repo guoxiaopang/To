@@ -15,11 +15,14 @@
 #import "PeopleDetailHeadView.h"
 #import "PeopleDetailInfoModel.h"
 #import "PeopleDetailNormalEditTableViewCell.h"
+#import "PeopleDetailTagManager.h"
+#import "PeopleDetailTagCell.h"
 
 static NSString *peopleDetailNormalTableViewCellIdent = @"peopleDetailNormalTableViewCellIdent";
 static NSString *peopleDetailSectionViewIdent = @"peopleDetailSectionViewIdent";
 static NSString *peopleDetailendCell = @"peopleDetailendCell";
 static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
+static NSString *peopleDetailTagCellIdent = @"PeopleDetailTagCellIdent";
 
 @interface PeopleDetailController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -28,6 +31,7 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
 @property(nonatomic, strong)UIBarButtonItem *rightBarButtonItem;
 // 保存用户输入的值 防止重用数据消失
 @property(nonatomic, strong)NSMutableDictionary *cellValueDict;
+//@property(nonatomic, strong)PeopleDetailTagManager *tagManager;
 
 @end
 
@@ -45,6 +49,7 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
     UINavigationBar *bar = self.navigationController.navigationBar;
     [bar setShadowImage:[[UIImage alloc] init]];
     self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
+
 }
 
 - (void)reloadData:(UserModel *)model
@@ -53,9 +58,20 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
     // headView赋值
     [self.headView headViewReloadData:model];
     self.dataManager.model = model;
+    
+   // self.tagManager.model = model;
 }
 
 #pragma mark - 懒加载
+//- (PeopleDetailTagManager *)tagManager
+//{
+//    if (!_tagManager)
+//    {
+//        _tagManager = [[PeopleDetailTagManager alloc] init];
+//    }
+//    return _tagManager;
+//}
+
 - (NSMutableDictionary *)cellValueDict
 {
     if (!_cellValueDict)
@@ -71,17 +87,18 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
     self.tableView.backgroundColor = [UIColor colorWithHex:0Xf6f5f1];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.tableView registerClass:[PeopleDetailNormalTableViewCell class] forCellReuseIdentifier:peopleDetailNormalTableViewCellIdent];
     [self.tableView registerClass:[PeopleDetailSectionView class] forHeaderFooterViewReuseIdentifier:peopleDetailSectionViewIdent];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:peopleDetailendCell];
     [self.tableView registerClass:[PeopleDetailNormalEditTableViewCell class] forCellReuseIdentifier:peopleDetailEditCell];
+  //  [self.tableView registerClass:[PeopleDetailTagCell class] forCellReuseIdentifier:peopleDetailTagCellIdent];
     self.tableView.showsVerticalScrollIndicator = false;
     self.tableView.tableHeaderView = self.headView;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 }
-
 
 - (UIBarButtonItem *)rightBarButtonItem
 {
@@ -116,42 +133,62 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
 #pragma mark - UITableViewDelegate, UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if ([tableView isEditing])
+    if (section == 0)
     {
-        return [self.dataManager numberOfSection] + 1;
+        if ([tableView isEditing])
+        {
+            return [self.dataManager numberOfSection] + 1;
+        }
+        return [self.dataManager numberOfSection];
     }
-    return [self.dataManager numberOfSection];
+    else
+    {
+        return 1;
+    }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([tableView isEditing] && indexPath.row == [self.dataManager numberOfSection])
+    if (indexPath.section == 0)
     {
-        // 最后一个cell
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailendCell];
-        cell.textLabel.text = @"add...";
-        return cell;
-    }
-    else if ([tableView isEditing] && indexPath.row == ([self.dataManager numberOfSection] - 1) && _addStatus)
-    {
-        PeopleDetailNormalEditTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailEditCell];
-        PeopleDetailInfoModel *model = self.cellValueDict[@(indexPath.row)];
-        [cell reloadData:model];
-        __weak typeof(self) weakSelf = self;
-        [cell returnBlock:^(NSString *title, NSString *value) {
-            PeopleDetailInfoModel *model = [[PeopleDetailInfoModel alloc] init];
-            model.title = title;
-            model.value = value;
-            weakSelf.cellValueDict[@(indexPath.row)] = model;
-        }];
-        return cell;
+        if ([tableView isEditing] && indexPath.row == [self.dataManager numberOfSection])
+        {
+            // 最后一个cell
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailendCell];
+            cell.textLabel.text = @"add...";
+            return cell;
+        }
+        else if ([tableView isEditing] && indexPath.row == ([self.dataManager numberOfSection] - 1) && _addStatus)
+        {
+            PeopleDetailNormalEditTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailEditCell];
+            PeopleDetailInfoModel *model = self.cellValueDict[@(indexPath.row)];
+            [cell reloadData:model];
+            __weak typeof(self) weakSelf = self;
+            [cell returnBlock:^(NSString *title, NSString *value) {
+                PeopleDetailInfoModel *model = [[PeopleDetailInfoModel alloc] init];
+                model.title = title;
+                model.value = value;
+                weakSelf.cellValueDict[@(indexPath.row)] = model;
+            }];
+            return cell;
+        }
+        else
+        {
+            PeopleDetailNormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailNormalTableViewCellIdent];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            PeopleDetailInfoModel *model = [self.dataManager modelWithRow:indexPath.row];
+            [cell reloadData:model];
+            return cell;
+        }
     }
     else
     {
-        PeopleDetailNormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailNormalTableViewCellIdent];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        PeopleDetailInfoModel *model = [self.dataManager modelWithRow:indexPath.row];
-        [cell reloadData:model];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailendCell];
         return cell;
     }
 }
@@ -159,6 +196,14 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     PeopleDetailSectionView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:peopleDetailSectionViewIdent];
+    if (section == 0)
+    {
+        [view reloadData:@"人物详情"];
+    }
+    else
+    {
+        [view reloadData:@"个性标签"];
+    }
     return view;
 }
 
@@ -169,7 +214,14 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return _moveStatus;
+    if (indexPath.section == 0)
+    {
+        return _moveStatus;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 // 设置cell编辑样式
@@ -183,7 +235,6 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
     {
         return UITableViewCellEditingStyleDelete; // 返回none就不会出现图标
     }
-    
 }
 
 // 编辑状态进行提交
@@ -251,4 +302,5 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
     }
     [self.tableView reloadData];
 }
+
 @end

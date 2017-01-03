@@ -14,8 +14,8 @@
 #import "YYFPSLabel.h"
 #import "ToNavigationController.h"
 #import <MagicalRecord/MagicalRecord.h>
-#import "UserModel.h"
 #import "UserManager.h"
+#import "Tag.h"
 
 @interface AppDelegate ()
 
@@ -62,27 +62,26 @@
 
 - (void)addUser
 {
-    UserModel *model = [UserModel MR_createEntity];
-    model.name = @"q";
-    model.uuid = [NSUUID UUID].UUIDString;
+    Tag *tag1 = [Tag MR_createEntity];
+    tag1.tagId = [NSUUID UUID].UUIDString;
+    tag1.tagName = @"逗比";
     
-    UserModel *model2 = [UserModel MR_createEntity];
-    model2.name = @"w";
-    model2.uuid = [NSUUID UUID].UUIDString;
+    Tag *tag2 = [Tag MR_createEntity];
+    tag2.tagId = [NSUUID UUID].UUIDString;
+    tag2.tagName = @"事情1";
     
-    UserModel *model3 = [UserModel MR_createEntity];
-    model3.name = @"e";
-    model3.uuid = [NSUUID UUID].UUIDString;
+    Tag *tag3 = [Tag MR_createEntity];
+    tag3.tagId = [NSUUID UUID].UUIDString;
+    tag3.tagName = @"属性2";
     
-    UserModel *model4 = [UserModel MR_createEntity];
-    model4.name = @"r";
-    model4.uuid = [NSUUID UUID].UUIDString;
+    Tag *tag4 = [Tag MR_createEntity];
+    tag4.tagId = [NSUUID UUID].UUIDString;
+    tag4.tagName = @"属性3";
     
-    UserManager *manager = [UserManager shareInstance];
-    [manager addUser:model];
-    [manager addUser:model2];
-    [manager addUser:model3];
-    [manager addUser:model4];
+    Tag *tag5 = [Tag MR_createEntity];
+    tag5.tagId = [NSUUID UUID].UUIDString;
+    tag5.tagName = @"属性4";
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 @end
