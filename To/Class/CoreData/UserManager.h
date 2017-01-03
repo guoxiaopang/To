@@ -27,6 +27,9 @@
 - (void)addUser:(UserModel *)user;
 // 删除User
 - (void)deleteUser:(UserModel *)user;
+// User改变
+- (void)changeUser:(UserModel *)user;
+
 
 // 返回所有group
 - (NSArray *)allGroup;

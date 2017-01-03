@@ -13,6 +13,7 @@
 @interface PeopleDetailSectionView()
 
 @property(nonatomic, strong) UILabel *titleLabel;
+//@property(nonatomic, strong) UIButton *button;
 
 @end
 
@@ -24,6 +25,7 @@
     if (self)
     {
         [self addSubview:self.titleLabel];
+      //  [self addSubview:self.button];
     }
     return self;
 }
@@ -47,5 +49,32 @@
     }
     return _titleLabel;
 }
+
+//- (UIButton *)button
+//{
+//    if (!_button)
+//    {
+//        _button = [[UIButton alloc] init];
+//        [_button setTitle:@"add" forState:UIControlStateNormal];
+//        [_button sizeToFit];
+//        _button.hidden = YES;
+//    }
+//    return _button;
+//}
+
+//#pragma mark - Void
+//- (void)setEditStatus:(BOOL)flag
+//{
+//    if (flag)
+//    {
+//        // 开启
+//        _button.hidden = NO;
+//    }
+//    else
+//    {
+//        // 关闭
+//        _button.hidden = YES;
+//    }
+//}
 
 @end

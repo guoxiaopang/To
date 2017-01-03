@@ -80,6 +80,11 @@
     }
 }
 
+- (void)changeUser:(UserModel *)user
+{
+     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+}
+
 - (void)addGroup:(NSString *)groupName idNum:(NSString *)idNum
 {
     UserGroup *group = [UserGroup MR_createEntity];

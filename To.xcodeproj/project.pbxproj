@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350FDED51E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */; };
 		3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B17E1E14A28B00521111 /* AppDelegate.m */; };
 		3572B18F1E14A28B00521111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3572B17F1E14A28B00521111 /* Assets.xcassets */; };
 		3572B1901E14A28B00521111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3572B1801E14A28B00521111 /* LaunchScreen.storyboard */; };
@@ -43,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350FDED31E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailNormalEditTableViewCell.h; sourceTree = "<group>"; };
+		350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailNormalEditTableViewCell.m; sourceTree = "<group>"; };
 		3572B17D1E14A28B00521111 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3572B17E1E14A28B00521111 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3572B17F1E14A28B00521111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -404,6 +407,8 @@
 				357915731E1657B4005C0F0A /* PeopleDetailSectionView.m */,
 				357915751E166012005C0F0A /* PeopleDetailHeadView.h */,
 				357915761E166012005C0F0A /* PeopleDetailHeadView.m */,
+				350FDED31E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.h */,
+				350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -596,6 +601,7 @@
 				3572B1D21E15017300521111 /* TitleModel.m in Sources */,
 				357915771E166012005C0F0A /* PeopleDetailHeadView.m in Sources */,
 				357915591E163C8A005C0F0A /* PeopleListViewController.m in Sources */,
+				350FDED51E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m in Sources */,
 				3579156B1E1647B3005C0F0A /* PeopleDetailDataManager.m in Sources */,
 				3572B1EC1E1514D000521111 /* UserGroup.m in Sources */,
 				3572B1CF1E15015300521111 /* UserModel.m in Sources */,
@@ -640,6 +646,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -687,6 +694,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

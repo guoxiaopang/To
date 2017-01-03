@@ -59,12 +59,12 @@
 {
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView);
-        make.left.equalTo(self.contentView).offset(10);
+        make.left.equalTo(self.contentView).offset(20);
     }];
     
     [_valueLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView);
-        make.right.equalTo(self.contentView).offset(-10);
+        make.right.equalTo(self.contentView).offset(-20);
     }];
 }
 

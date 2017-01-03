@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserModel.h"
 
-@interface PeopleDetailController : UIViewController
+@interface PeopleDetailController : UITableViewController
+
+- (void)reloadData:(UserModel *)model;
 
 @end

@@ -113,6 +113,8 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 {
     PeopleDetailController *controller = [[PeopleDetailController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
+    UserModel *model = [self.dataManager modelWithIndexPath:indexPath];
+    [controller reloadData:model];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -139,6 +141,5 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
     PeopleAddViewController *controller = [[PeopleAddViewController alloc] init];
     ToNavigationController *navigationVC = [[ToNavigationController alloc] initWithRootViewController:controller];
     [self presentViewController:navigationVC animated:YES completion:nil];
-    //[self.navigationController pushViewController:controller animated:YES];
 }
 @end

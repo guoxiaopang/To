@@ -10,4 +10,6 @@
 
 @interface PeopleDetailSectionView : UITableViewHeaderFooterView
 
+//- (void)setEditStatus:(BOOL)flag;
+
 @end

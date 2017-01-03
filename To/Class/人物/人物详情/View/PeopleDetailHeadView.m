@@ -31,6 +31,11 @@
     return self;
 }
 
+- (void)headViewReloadData:(UserModel *)model
+{
+    _nameLabel.text = model.name;
+}
+
 #pragma mark - 懒加载
 - (UILabel *)nameLabel
 {

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserModel.h"
 
 @interface PeopleDetailHeadView : UIView
+
+- (void)headViewReloadData:(UserModel *)model;
 
 @end
