@@ -22,7 +22,6 @@
 
 // 真的新增一条数据模型
 - (void)insertModel:(PeopleDetailInfoModel *)model index:(NSInteger)index;
-//- (void)insertTitle:(NSString *)title value:(NSString *)value index:(NSInteger)index;
 // 假的新增数据模型
 - (void)insertModelAtindex:(NSInteger)index;
 

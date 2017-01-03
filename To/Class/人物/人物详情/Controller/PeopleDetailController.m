@@ -51,6 +51,7 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
     [self setUpTableView];
     // headView赋值
     [self.headView headViewReloadData:model];
+    self.dataManager.model = model;
 }
 
 #pragma mark - 懒加载
@@ -221,7 +222,6 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
         [self.tableView setEditing:NO animated:YES];
         [button setTitle:@"编辑"];
         _addStatus = false;
-#warning 这里应该做点什么
 
         NSArray *array = self.cellValueDict.allKeys;
         for (NSNumber *key in array)

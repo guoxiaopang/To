@@ -42,6 +42,12 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
     self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView.mj_header beginRefreshing];
+}
+
 #pragma mark 懒加载
 - (UIBarButtonItem *)rightBarButtonItem
 {
