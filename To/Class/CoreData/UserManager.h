@@ -9,7 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "UserModel.h"
 
+@class UserManager;
+@protocol UserManagerDelegate <NSObject>
+
+// 数据改变代理
+- (void)dataCountChange:(UserManager *)manager;
+
+@end
+
 @interface UserManager : NSObject
+
+@property(nonatomic, weak) id<UserManagerDelegate> target;
+- (void)addTarget:(id)controller;
 
 + (instancetype)shareInstance;
 // 增加User

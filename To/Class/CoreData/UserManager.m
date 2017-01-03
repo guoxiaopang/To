@@ -45,6 +45,10 @@
         NSLog(@"group不存在 请检查");
     }
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    if ([self.target respondsToSelector:@selector(dataCountChange:)])
+    {
+        [self.target dataCountChange:self];
+    }
 }
 
 - (void)addUser:(UserModel *)user
@@ -70,6 +74,10 @@
         NSLog(@"索引组异常");
     }
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    if ([self.target respondsToSelector:@selector(dataCountChange:)])
+    {
+        [self.target dataCountChange:self];
+    }
 }
 
 - (void)addGroup:(NSString *)groupName idNum:(NSString *)idNum
@@ -106,6 +114,11 @@
 {
     NSArray *array = [UserModel MR_findByAttribute:@"uuid" withValue:uuid];
     return [array firstObject];
+}
+
+- (void)addTarget:(id)controller
+{
+    self.target = controller;
 }
 
 @end

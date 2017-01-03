@@ -128,6 +128,11 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
     [self.tableView reloadData];
 }
 
+- (void)peopleListDatamanagerReloadData:(PeopleListDatamanager *)manager
+{
+    [self.tableView.mj_header beginRefreshing];
+}
+
 #pragma mark - Void
 - (void)pushAddController
 {

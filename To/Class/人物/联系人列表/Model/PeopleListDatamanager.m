@@ -10,7 +10,7 @@
 #import "UserGroup.h"
 #import "UserManager.h"
 
-@interface PeopleListDatamanager()
+@interface PeopleListDatamanager()<UserManagerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *groupItem;
 @property (nonatomic, strong) NSMutableArray *titleArray;
@@ -24,6 +24,7 @@
     [self.groupItem removeAllObjects];
     [self.titleArray removeAllObjects];
     NSArray *array = [[UserManager shareInstance] allGroup];
+    [[UserManager shareInstance] addTarget:self];
     for (UserGroup *group in array)
     {
         [self.groupItem addObject:group];
@@ -84,6 +85,15 @@
 - (NSArray *)indexArray
 {
     return self.titleArray;
+}
+
+#pragma mark - UserManagerDelegate
+- (void)dataCountChange:(UserManager *)manager
+{
+    if ([self.delegate respondsToSelector:@selector(peopleListDatamanagerReloadData:)])
+    {
+        [self.delegate peopleListDatamanagerReloadData:self];
+    }
 }
 
 @end

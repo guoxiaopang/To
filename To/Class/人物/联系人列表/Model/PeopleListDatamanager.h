@@ -13,7 +13,10 @@
 @class PeopleListDatamanager;
 @protocol PeopleListDatamanagerDelegate <NSObject>
 
+// list查询成功
 - (void)peopleListDatamanagerSuccess:(PeopleListDatamanager *)manager;
+// 刷新数据
+- (void)peopleListDatamanagerReloadData:(PeopleListDatamanager *)manager;
 
 @end
 
