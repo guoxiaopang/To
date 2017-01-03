@@ -103,4 +103,10 @@
     [[UserManager shareInstance] changeUser:_model];
 }
 
+- (void)changeSourceIndexPath:(NSInteger)source withObjectAtIndex:(NSInteger)des
+{
+    [self.item exchangeObjectAtIndex:source withObjectAtIndex:des];
+    [self saveToDataBase];
+}
+
 @end

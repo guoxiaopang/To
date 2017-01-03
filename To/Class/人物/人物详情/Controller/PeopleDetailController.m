@@ -34,6 +34,7 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
 @implementation PeopleDetailController
 {
     BOOL _addStatus;
+    BOOL _moveStatus;
 }
 
 - (void)viewDidLoad
@@ -168,7 +169,7 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return YES;
+    return _moveStatus;
 }
 
 // 设置cell编辑样式
@@ -208,6 +209,20 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
     }
 }
 
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return _moveStatus;
+}
+
+// 移动设置
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    // 修改数据源
+    [self.dataManager changeSourceIndexPath:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+    // 让表视图对应进行移动
+    [tableView exchangeSubviewAtIndex:sourceIndexPath.row withSubviewAtIndex:destinationIndexPath.row];
+}
+
 #pragma mark - Void
 - (void)clickEdit:(UIBarButtonItem *)button
 {
@@ -215,18 +230,22 @@ static NSString *peopleDetailEditCell = @"peopleDetailEditCellIdent";
     {
         [self.tableView setEditing:YES animated:YES];
         [button setTitle:@"完成"];
-
+        _moveStatus = true;
     }
     else
     {
         [self.tableView setEditing:NO animated:YES];
         [button setTitle:@"编辑"];
         _addStatus = false;
-
+        _moveStatus = false;
         NSArray *array = self.cellValueDict.allKeys;
         for (NSNumber *key in array)
         {
-            [self.dataManager insertModel:self.cellValueDict[key] index:[key integerValue]];
+            PeopleDetailInfoModel *model = self.cellValueDict[key];
+            if (model)
+            {
+                 [self.dataManager insertModel:model index:[key integerValue]];
+            }
         }
         [self.cellValueDict removeAllObjects];
     }

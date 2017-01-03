@@ -28,4 +28,7 @@
 // 删除数据模型
 - (void)deleteModel:(PeopleDetailInfoModel *)model;
 
+// 移动cell交换数据
+- (void)changeSourceIndexPath:(NSInteger)source withObjectAtIndex:(NSInteger)des;
+
 @end
