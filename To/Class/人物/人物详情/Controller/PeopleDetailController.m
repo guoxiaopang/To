@@ -15,9 +15,10 @@
 #import "PeopleDetailHeadView.h"
 #import "PeopleDetailInfoModel.h"
 #import "PeopleDetailNormalEditTableViewCell.h"
-#import "PeopleDetailTagManager.h"
-#import "PeopleDetailTagCell.h"
+//#import "PeopleDetailTagManager.h"
+//#import "PeopleDetailTagCell.h"
 #import "PeopleDetailThingTableViewCell.h"
+#import "PeopleDetailThingManager.h"
 
 static NSString *peopleDetailNormalTableViewCellIdent = @"peopleDetailNormalTableViewCellIdent";
 static NSString *peopleDetailSectionViewIdent = @"peopleDetailSectionViewIdent";
@@ -34,6 +35,7 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
 // 保存用户输入的值 防止重用数据消失
 @property(nonatomic, strong)NSMutableDictionary *cellValueDict;
 //@property(nonatomic, strong)PeopleDetailTagManager *tagManager;
+@property(nonatomic, strong)PeopleDetailThingManager *thingManager;
 
 @end
 
@@ -61,18 +63,19 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
     [self.headView headViewReloadData:model];
     self.dataManager.model = model;
     
+    [self.thingManager requestThing:model];
    // self.tagManager.model = model;
 }
 
 #pragma mark - 懒加载
-//- (PeopleDetailTagManager *)tagManager
-//{
-//    if (!_tagManager)
-//    {
-//        _tagManager = [[PeopleDetailTagManager alloc] init];
-//    }
-//    return _tagManager;
-//}
+- (PeopleDetailThingManager *)thingManager
+{
+    if (!_thingManager)
+    {
+        _thingManager = [[PeopleDetailThingManager alloc] init];
+    }
+    return _thingManager;
+}
 
 - (NSMutableDictionary *)cellValueDict
 {
@@ -146,13 +149,13 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
     }
     else
     {
-        return 1;
+        return [self.thingManager numOfRow];
     }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -192,6 +195,8 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
     else
     {
         PeopleDetailThingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:peopleDetailThingTableViewCellIdent];
+        ThingModel *model = [self.thingManager modelWithRow:indexPath.row];
+        [cell reloadData:model];
         return cell;
     }
 }
@@ -205,7 +210,7 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
     }
     else
     {
-        [view reloadData:@"个性标签"];
+        [view reloadData:@"事件"];
     }
     return view;
 }

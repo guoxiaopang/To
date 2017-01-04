@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ThingModel.h"
 
 @interface PeopleDetailThingTableViewCell : UITableViewCell
+
+- (void)reloadData:(ThingModel *)model;
 
 @end

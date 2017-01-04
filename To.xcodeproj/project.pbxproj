@@ -39,6 +39,7 @@
 		3579156E1E1648C2005C0F0A /* PeopleDetailInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3579156D1E1648C2005C0F0A /* PeopleDetailInfoModel.m */; };
 		357915741E1657B4005C0F0A /* PeopleDetailSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915731E1657B4005C0F0A /* PeopleDetailSectionView.m */; };
 		357915771E166012005C0F0A /* PeopleDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915761E166012005C0F0A /* PeopleDetailHeadView.m */; };
+		359BE1161E1CD67700CFCA55 /* PeopleDetailThingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359BE1151E1CD67700CFCA55 /* PeopleDetailThingManager.m */; };
 		35A89CE61E13B92100E2410A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A89CE51E13B92100E2410A /* main.m */; };
 		35B5954B1E1BAD100013B366 /* TagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B5954A1E1BAD100013B366 /* TagModel.m */; };
 		35B5954E1E1BC0480013B366 /* PeopleDetailTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B5954D1E1BC0480013B366 /* PeopleDetailTagManager.m */; };
@@ -112,6 +113,8 @@
 		357915731E1657B4005C0F0A /* PeopleDetailSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailSectionView.m; sourceTree = "<group>"; };
 		357915751E166012005C0F0A /* PeopleDetailHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailHeadView.h; sourceTree = "<group>"; };
 		357915761E166012005C0F0A /* PeopleDetailHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailHeadView.m; sourceTree = "<group>"; };
+		359BE1141E1CD67700CFCA55 /* PeopleDetailThingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailThingManager.h; sourceTree = "<group>"; };
+		359BE1151E1CD67700CFCA55 /* PeopleDetailThingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailThingManager.m; sourceTree = "<group>"; };
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 				3579156D1E1648C2005C0F0A /* PeopleDetailInfoModel.m */,
 				35B5954C1E1BC0480013B366 /* PeopleDetailTagManager.h */,
 				35B5954D1E1BC0480013B366 /* PeopleDetailTagManager.m */,
+				359BE1141E1CD67700CFCA55 /* PeopleDetailThingManager.h */,
+				359BE1151E1CD67700CFCA55 /* PeopleDetailThingManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -640,6 +645,7 @@
 				3572B1C51E14DC8400521111 /* ToNavigationController.m in Sources */,
 				357915651E16457E005C0F0A /* PeopleDetailController.m in Sources */,
 				357915681E164703005C0F0A /* PeopleDetailNormalTableViewCell.m in Sources */,
+				359BE1161E1CD67700CFCA55 /* PeopleDetailThingManager.m in Sources */,
 				35B5954B1E1BAD100013B366 /* TagModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
