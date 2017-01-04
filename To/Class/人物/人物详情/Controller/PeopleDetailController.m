@@ -19,6 +19,8 @@
 //#import "PeopleDetailTagCell.h"
 #import "PeopleDetailThingTableViewCell.h"
 #import "PeopleDetailThingManager.h"
+#import <MagicalRecord/MagicalRecord.h>
+#import "UserManager.h"
 
 static NSString *peopleDetailNormalTableViewCellIdent = @"peopleDetailNormalTableViewCellIdent";
 static NSString *peopleDetailSectionViewIdent = @"peopleDetailSectionViewIdent";
@@ -43,6 +45,7 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
 {
     BOOL _addStatus;
     BOOL _moveStatus;
+    UserModel *_userModel;
 }
 
 - (void)viewDidLoad
@@ -54,6 +57,30 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
     [bar setShadowImage:[[UIImage alloc] init]];
     self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
 
+    UIButton *addButton = [[UIButton alloc] init];
+    [addButton setTitle:@"add" forState:UIControlStateNormal];
+    [addButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [addButton addTarget:self action:@selector(addThing) forControlEvents:UIControlEventTouchUpInside];
+    addButton.frame = CGRectMake(10, 80, 40, 60);
+    [[UIApplication sharedApplication].keyWindow addSubview:addButton];
+}
+
+#warning 记得删除
+- (void)addThing
+{
+    ThingModel *model = [ThingModel MR_createEntity];
+    model.thingID = [NSUUID UUID].UUIDString;
+    model.content = @"这是测试这是测试这是测试这是测试这是测试这是测试这是测试啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊";
+    double time = [NSDate date].timeIntervalSince1970;
+    model.time = [NSString stringWithFormat:@"%f", time];
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObjectsFromArray:_userModel.eventArray];
+    [array addObject:model.thingID];
+    _userModel.eventArray = array;
+    [[UserManager shareInstance] changeUser:_userModel];
+    [self.thingManager requestThing:_userModel];
+    [self.tableView reloadData];
+
 }
 
 - (void)reloadData:(UserModel *)model
@@ -62,6 +89,7 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
     // headView赋值
     [self.headView headViewReloadData:model];
     self.dataManager.model = model;
+    _userModel = model;
     
     [self.thingManager requestThing:model];
    // self.tagManager.model = model;

@@ -19,6 +19,7 @@
 
 - (void)requestThing:(UserModel *)model
 {
+    [self.item removeAllObjects];
     for (NSString *thingId in model.eventArray)
     {
         ThingModel *model = [[ThingModel MR_findByAttribute:@"thingID" withValue:thingId] firstObject];
@@ -28,7 +29,7 @@
 
 - (NSInteger)numOfRow
 {
-    return 5;
+    return self.item.count;
 }
 
 - (ThingModel *)modelWithRow:(NSInteger)row

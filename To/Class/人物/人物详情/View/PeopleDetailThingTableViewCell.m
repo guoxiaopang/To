@@ -50,6 +50,14 @@
 - (void)reloadData:(ThingModel *)model
 {
     _thingLabel.text = model.content;
+    
+    // time是时间搓
+    double time = [model.time doubleValue];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy年MM月dd日 HH:mm:ss";
+    NSString *timeStr = [fmt stringFromDate:date];
+    _timeLabel.text = timeStr;
 }
 
 #pragma mark - 懒加载
@@ -59,7 +67,6 @@
     {
         _timeLabel = [[UILabel alloc] init];
         _timeLabel.font = [UIFont systemFontOfSize:14];
-        _timeLabel.text = @"2015年10月2日";
     }
     return _timeLabel;
 }
@@ -70,7 +77,6 @@
     {
         _thingLabel = [[UILabel alloc] init];
         _thingLabel.numberOfLines = 0;
-        _thingLabel.text = @"啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊";
     }
     return _thingLabel;
 }
