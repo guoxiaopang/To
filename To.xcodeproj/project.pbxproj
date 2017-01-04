@@ -115,6 +115,7 @@
 		357915761E166012005C0F0A /* PeopleDetailHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailHeadView.m; sourceTree = "<group>"; };
 		359BE1141E1CD67700CFCA55 /* PeopleDetailThingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailThingManager.h; sourceTree = "<group>"; };
 		359BE1151E1CD67700CFCA55 /* PeopleDetailThingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailThingManager.m; sourceTree = "<group>"; };
+		359BE1171E1CFB0B00CFCA55 /* To.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = To.entitlements; sourceTree = "<group>"; };
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -464,6 +465,7 @@
 		35A89CE31E13B92100E2410A /* To */ = {
 			isa = PBXGroup;
 			children = (
+				359BE1171E1CFB0B00CFCA55 /* To.entitlements */,
 				3572B17B1E14A28B00521111 /* Class */,
 				35A89CE41E13B92100E2410A /* Supporting Files */,
 			);
@@ -525,6 +527,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = K786QX52SJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -759,6 +766,8 @@
 			baseConfigurationReference = 9D8F601A3EC5A6AFB0E3D008 /* Pods-To.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = To/To.entitlements;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = K786QX52SJ;
 				INFOPLIST_FILE = To/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -773,6 +782,7 @@
 			baseConfigurationReference = 38B5F052C9FB9A612DC8CBB5 /* Pods-To.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = To/To.entitlements;
 				DEVELOPMENT_TEAM = K786QX52SJ;
 				INFOPLIST_FILE = To/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

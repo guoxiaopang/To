@@ -40,6 +40,7 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
     }];
     [self.tableView.mj_header beginRefreshing];
     self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -7,5 +7,7 @@ pod 'YYWebImage'
 pod 'YYModel'
 pod 'MagicalRecord’
 pod 'MJRefresh'
+pod 'JSPatchPlatform'
+pod 'Bugly'
 end
 

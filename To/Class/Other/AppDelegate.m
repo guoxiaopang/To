@@ -14,8 +14,8 @@
 #import "YYFPSLabel.h"
 #import "ToNavigationController.h"
 #import <MagicalRecord/MagicalRecord.h>
-#import "UserManager.h"
-#import "TagModel.h"
+#import <JSPatchPlatform/JSPatch.h>
+#import <Bugly/Bugly.h>
 
 @interface AppDelegate ()
 
@@ -35,13 +35,19 @@
     
     self.window.rootViewController = self.rootViewController;
     [self.window makeKeyAndVisible];
-    
+#ifdef DEBUG
     YYFPSLabel *label = [[YYFPSLabel alloc] init];
     label.frame = CGRectMake(40, 20, 50, 30);
     [self.window addSubview:label];
-    
+#endif
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"d.sqlite"];
-    //[self addUser];
+    
+//    [JSPatch startWithAppKey:@"51032afe02cb2d41"];
+//#ifdef DEBUG
+//    [JSPatch setupDevelopment];
+//#endif
+//    [JSPatch sync];
+    [Bugly startWithAppId:@"cd4f73088e"];
     return YES;
 }
 
@@ -60,28 +66,6 @@
     [MagicalRecord cleanUp];
 }
 
-- (void)addUser
-{
-    TagModel *tag1 = [TagModel MR_createEntity];
-    tag1.tagId = [NSUUID UUID].UUIDString;
-    tag1.tagName = @"逗比";
-    
-    TagModel *tag2 = [TagModel MR_createEntity];
-    tag2.tagId = [NSUUID UUID].UUIDString;
-    tag2.tagName = @"事情1";
-    
-    TagModel *tag3 = [TagModel MR_createEntity];
-    tag3.tagId = [NSUUID UUID].UUIDString;
-    tag3.tagName = @"属性2";
-    
-    TagModel *tag4 = [TagModel MR_createEntity];
-    tag4.tagId = [NSUUID UUID].UUIDString;
-    tag4.tagName = @"属性3";
-    
-    TagModel *tag5 = [TagModel MR_createEntity];
-    tag5.tagId = [NSUUID UUID].UUIDString;
-    tag5.tagName = @"属性4";
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-}
+
 
 @end
