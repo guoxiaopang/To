@@ -15,6 +15,7 @@
 #import "PeopleAddViewController.h"
 #import "ToNavigationController.h"
 #import "PeopleDetailController.h"
+#import "Masonry.h"
 
 static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 @interface PeopleListViewController ()<UITableViewDelegate, UITableViewDataSource, PeopleListDatamanagerDelegate>
@@ -22,7 +23,8 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) PeopleListDatamanager *dataManager;
 @property(nonatomic, strong) MJRefreshHeader *refreshHeader;
-@property(nonatomic,strong) UIBarButtonItem *rightBarButtonItem;
+@property(nonatomic, strong) UIBarButtonItem *rightBarButtonItem;
+@property(nonatomic, strong) UIButton *addButton;
 
 @end
 
@@ -41,6 +43,8 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
     [self.tableView.mj_header beginRefreshing];
     self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
     
+    [self.view addSubview:self.addButton];
+    [self addLayout];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -50,6 +54,18 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 }
 
 #pragma mark 懒加载
+- (UIButton *)addButton
+{
+    if (!_addButton)
+    {
+        _addButton = [[UIButton alloc] init];
+        [_addButton setImage:[UIImage imageNamed:@"newNote-normal"] forState:UIControlStateNormal];
+        [_addButton setImage:[UIImage imageNamed:@"newNote-pressed"] forState:UIControlStateHighlighted];
+        [_addButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _addButton;
+}
+
 - (UIBarButtonItem *)rightBarButtonItem
 {
     if (!_rightBarButtonItem)
@@ -148,5 +164,34 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
     PeopleAddViewController *controller = [[PeopleAddViewController alloc] init];
     ToNavigationController *navigationVC = [[ToNavigationController alloc] initWithRootViewController:controller];
     [self presentViewController:navigationVC animated:YES completion:nil];
+}
+
+- (void)addLayout
+{
+    [_addButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.equalTo(@54);
+        make.right.equalTo(self.view).offset(-20);
+        make.bottom.equalTo(self.view).offset(-20);
+    }];
+}
+
+- (void)buttonClick:(UIButton *)button
+{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *addPerson = [UIAlertAction actionWithTitle:@"增加联系人" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"增加联系人");
+    }];
+    
+    UIAlertAction *addThing = [UIAlertAction actionWithTitle:@"增加事件" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"增加事件");
+    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [controller addAction:addPerson];
+    [controller addAction:addThing];
+    [controller addAction:cancel];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 @end

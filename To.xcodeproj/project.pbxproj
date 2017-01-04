@@ -40,6 +40,7 @@
 		357915741E1657B4005C0F0A /* PeopleDetailSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915731E1657B4005C0F0A /* PeopleDetailSectionView.m */; };
 		357915771E166012005C0F0A /* PeopleDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357915761E166012005C0F0A /* PeopleDetailHeadView.m */; };
 		359BE1161E1CD67700CFCA55 /* PeopleDetailThingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359BE1151E1CD67700CFCA55 /* PeopleDetailThingManager.m */; };
+		359BE11E1E1D20E600CFCA55 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359BE11D1E1D20E600CFCA55 /* AddEventViewController.m */; };
 		35A89CE61E13B92100E2410A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A89CE51E13B92100E2410A /* main.m */; };
 		35B5954B1E1BAD100013B366 /* TagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B5954A1E1BAD100013B366 /* TagModel.m */; };
 		35B5954E1E1BC0480013B366 /* PeopleDetailTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B5954D1E1BC0480013B366 /* PeopleDetailTagManager.m */; };
@@ -116,6 +117,8 @@
 		359BE1141E1CD67700CFCA55 /* PeopleDetailThingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailThingManager.h; sourceTree = "<group>"; };
 		359BE1151E1CD67700CFCA55 /* PeopleDetailThingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailThingManager.m; sourceTree = "<group>"; };
 		359BE1171E1CFB0B00CFCA55 /* To.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = To.entitlements; sourceTree = "<group>"; };
+		359BE11C1E1D20E600CFCA55 /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
+		359BE11D1E1D20E600CFCA55 /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 		35A89CE11E13B92100E2410A /* To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A89CE51E13B92100E2410A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A89CF51E13B92100E2410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,6 +188,7 @@
 		3572B1861E14A28B00521111 /* 人物 */ = {
 			isa = PBXGroup;
 			children = (
+				359BE1181E1D20C500CFCA55 /* 增加事件 */,
 				3579155F1E164569005C0F0A /* 人物详情 */,
 				3579154B1E163C8A005C0F0A /* 联系人列表 */,
 				357915551E163C8A005C0F0A /* 增加联系人 */,
@@ -444,6 +448,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		359BE1181E1D20C500CFCA55 /* 增加事件 */ = {
+			isa = PBXGroup;
+			children = (
+				359BE1191E1D20C500CFCA55 /* Controller */,
+				359BE11A1E1D20C500CFCA55 /* Model */,
+				359BE11B1E1D20C500CFCA55 /* View */,
+			);
+			path = "增加事件";
+			sourceTree = "<group>";
+		};
+		359BE1191E1D20C500CFCA55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				359BE11C1E1D20E600CFCA55 /* AddEventViewController.h */,
+				359BE11D1E1D20E600CFCA55 /* AddEventViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		359BE11A1E1D20C500CFCA55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		359BE11B1E1D20C500CFCA55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		35A89CD81E13B92100E2410A = {
 			isa = PBXGroup;
 			children = (
@@ -623,6 +660,7 @@
 				3572B1B81E14BE9F00521111 /* LeftHeadView.m in Sources */,
 				35B5954E1E1BC0480013B366 /* PeopleDetailTagManager.m in Sources */,
 				3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */,
+				359BE11E1E1D20E600CFCA55 /* AddEventViewController.m in Sources */,
 				3572B1EF1E15153600521111 /* UserManager.m in Sources */,
 				357915741E1657B4005C0F0A /* PeopleDetailSectionView.m in Sources */,
 				35B595511E1BC5480013B366 /* PeopleDetailTagCell.m in Sources */,

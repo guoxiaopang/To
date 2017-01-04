@@ -38,6 +38,7 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
 @property(nonatomic, strong)NSMutableDictionary *cellValueDict;
 //@property(nonatomic, strong)PeopleDetailTagManager *tagManager;
 @property(nonatomic, strong)PeopleDetailThingManager *thingManager;
+@property(nonatomic, strong) UIButton *addButton;
 
 @end
 
@@ -57,15 +58,30 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
     [bar setShadowImage:[[UIImage alloc] init]];
     self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
 
-    UIButton *addButton = [[UIButton alloc] init];
-    [addButton setTitle:@"add" forState:UIControlStateNormal];
-    [addButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [addButton addTarget:self action:@selector(addThing) forControlEvents:UIControlEventTouchUpInside];
-    addButton.frame = CGRectMake(10, 80, 40, 60);
-    [[UIApplication sharedApplication].keyWindow addSubview:addButton];
+    [[UIApplication sharedApplication].keyWindow addSubview:self.addButton];
 }
 
 #warning 记得删除
+
+- (void)dealloc
+{
+    [self.addButton removeFromSuperview];
+}
+
+- (UIButton *)addButton
+{
+    if (!_addButton)
+    {
+        _addButton = [[UIButton alloc] init];
+        [_addButton setTitle:@"add" forState:UIControlStateNormal];
+        [_addButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_addButton addTarget:self action:@selector(addThing) forControlEvents:UIControlEventTouchUpInside];
+        _addButton.frame = CGRectMake(10, 80, 40, 60);
+
+    }
+    return _addButton;
+}
+
 - (void)addThing
 {
     ThingModel *model = [ThingModel MR_createEntity];
