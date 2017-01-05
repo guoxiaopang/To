@@ -40,7 +40,7 @@
     label.frame = CGRectMake(40, 20, 50, 30);
     [self.window addSubview:label];
 #endif
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"d.sqlite"];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"d.sqlite"]; // 自动升级
     
     [JSPatch startWithAppKey:@"51032afe02cb2d41"];
 #ifdef DEBUG

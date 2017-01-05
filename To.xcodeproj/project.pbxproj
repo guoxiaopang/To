@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3505FBFC1E1E1FFF009B2028 /* Model1to2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3505FBFB1E1E1FFF009B2028 /* Model1to2.xcmappingmodel */; };
 		350FDED51E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */; };
 		3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B17E1E14A28B00521111 /* AppDelegate.m */; };
 		3572B18F1E14A28B00521111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3572B17F1E14A28B00521111 /* Assets.xcassets */; };
@@ -51,6 +52,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3505FBF91E1E1EFD009B2028 /* Model1To2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model1To2.xcdatamodel; sourceTree = "<group>"; };
+		3505FBFA1E1E1FAE009B2028 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		3505FBFB1E1E1FFF009B2028 /* Model1to2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model1to2.xcmappingmodel; sourceTree = "<group>"; };
 		350FDED31E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailNormalEditTableViewCell.h; sourceTree = "<group>"; };
 		350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailNormalEditTableViewCell.m; sourceTree = "<group>"; };
 		3572B17D1E14A28B00521111 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -313,6 +317,7 @@
 				3572B1D31E1501A700521111 /* EventModel.h */,
 				3572B1D41E1501A700521111 /* EventModel.m */,
 				3572B1DB1E15087700521111 /* Model.xcdatamodeld */,
+				3505FBFB1E1E1FFF009B2028 /* Model1to2.xcmappingmodel */,
 				3572B1EA1E1514D000521111 /* UserGroup.h */,
 				3572B1EB1E1514D000521111 /* UserGroup.m */,
 				3572B1ED1E15153600521111 /* UserManager.h */,
@@ -672,6 +677,7 @@
 				35B595541E1BCDB20013B366 /* PeopleDetailThingTableViewCell.m in Sources */,
 				3572B1DD1E15087700521111 /* Model.xcdatamodeld in Sources */,
 				3579155A1E163C8A005C0F0A /* PeopleListDatamanager.m in Sources */,
+				3505FBFC1E1E1FFF009B2028 /* Model1to2.xcmappingmodel in Sources */,
 				3572B1BB1E14DAE500521111 /* SidePanelViewController.m in Sources */,
 				3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */,
 				3572B1B51E14B1D900521111 /* LeftTableViewCell.m in Sources */,
@@ -857,6 +863,8 @@
 		3572B1DB1E15087700521111 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3505FBFA1E1E1FAE009B2028 /* Model 2.xcdatamodel */,
+				3505FBF91E1E1EFD009B2028 /* Model1To2.xcdatamodel */,
 				3572B1DC1E15087700521111 /* Model.xcdatamodel */,
 			);
 			currentVersion = 3572B1DC1E15087700521111 /* Model.xcdatamodel */;

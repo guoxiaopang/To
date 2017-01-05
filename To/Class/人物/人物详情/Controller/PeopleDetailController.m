@@ -326,6 +326,19 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
     [tableView exchangeSubviewAtIndex:sourceIndexPath.row withSubviewAtIndex:destinationIndexPath.row];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0)
+    {
+        
+    }
+    else if(indexPath.section == 1)
+    {
+        
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark - Void
 - (void)clickEdit:(UIBarButtonItem *)button
 {
