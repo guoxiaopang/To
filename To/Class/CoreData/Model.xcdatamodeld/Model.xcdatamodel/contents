@@ -3,7 +3,6 @@
     <entity name="TagModel" representedClassName="TagModel" syncable="YES">
         <attribute name="tagId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tagName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="test" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="ThingModel" representedClassName="ThingModel" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,7 +25,7 @@
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TagModel" positionX="-711" positionY="20" width="128" height="90"/>
+        <element name="TagModel" positionX="-711" positionY="20" width="128" height="75"/>
         <element name="ThingModel" positionX="-504" positionY="116" width="128" height="118"/>
         <element name="UserGroup" positionX="-99" positionY="-99" width="128" height="73"/>
         <element name="UserModel" positionX="-306" positionY="-144" width="128" height="150"/>

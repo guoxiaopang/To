@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3505FC031E1E261F009B2028 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3505FC011E1E261F009B2028 /* Model.xcdatamodeld */; };
 		3505FC0A1E1E2AAA009B2028 /* UserDetailReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3505FC091E1E2AAA009B2028 /* UserDetailReminderViewController.m */; };
 		3505FC0D1E1E2D01009B2028 /* UserDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3505FC0C1E1E2D01009B2028 /* UserDetailTableViewCell.m */; };
+		3505FC131E1E3602009B2028 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3505FC111E1E3602009B2028 /* Model.xcdatamodeld */; };
 		350FDED51E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */; };
 		3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B17E1E14A28B00521111 /* AppDelegate.m */; };
 		3572B18F1E14A28B00521111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3572B17F1E14A28B00521111 /* Assets.xcassets */; };
@@ -53,11 +53,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3505FC021E1E261F009B2028 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		3505FC081E1E2AAA009B2028 /* UserDetailReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailReminderViewController.h; sourceTree = "<group>"; };
 		3505FC091E1E2AAA009B2028 /* UserDetailReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailReminderViewController.m; sourceTree = "<group>"; };
 		3505FC0B1E1E2D01009B2028 /* UserDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailTableViewCell.h; sourceTree = "<group>"; };
 		3505FC0C1E1E2D01009B2028 /* UserDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailTableViewCell.m; sourceTree = "<group>"; };
+		3505FC121E1E3602009B2028 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		350FDED31E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailNormalEditTableViewCell.h; sourceTree = "<group>"; };
 		350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailNormalEditTableViewCell.m; sourceTree = "<group>"; };
 		3572B17D1E14A28B00521111 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -348,7 +348,7 @@
 		3572B1C91E14FEFB00521111 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				3505FC011E1E261F009B2028 /* Model.xcdatamodeld */,
+				3505FC111E1E3602009B2028 /* Model.xcdatamodeld */,
 				3572B1CD1E15015300521111 /* UserModel.h */,
 				3572B1CE1E15015300521111 /* UserModel.m */,
 				3572B1D01E15017300521111 /* TitleModel.h */,
@@ -708,6 +708,7 @@
 				357915741E1657B4005C0F0A /* PeopleDetailSectionView.m in Sources */,
 				35B595511E1BC5480013B366 /* PeopleDetailTagCell.m in Sources */,
 				3579156E1E1648C2005C0F0A /* PeopleDetailInfoModel.m in Sources */,
+				3505FC131E1E3602009B2028 /* Model.xcdatamodeld in Sources */,
 				3572B1C11E14DBFD00521111 /* YYFPSLabel.m in Sources */,
 				3572B1B11E14B15700521111 /* JASidePanelController.m in Sources */,
 				3579155B1E163C8A005C0F0A /* PeopleListTableViewCell.m in Sources */,
@@ -717,7 +718,6 @@
 				3572B1BB1E14DAE500521111 /* SidePanelViewController.m in Sources */,
 				3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */,
 				3572B1B51E14B1D900521111 /* LeftTableViewCell.m in Sources */,
-				3505FC031E1E261F009B2028 /* Model.xcdatamodeld in Sources */,
 				3572B1C21E14DBFD00521111 /* YYWeakProxy.m in Sources */,
 				35A89CE61E13B92100E2410A /* main.m in Sources */,
 				3572B1D21E15017300521111 /* TitleModel.m in Sources */,
@@ -898,12 +898,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3505FC011E1E261F009B2028 /* Model.xcdatamodeld */ = {
+		3505FC111E1E3602009B2028 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3505FC021E1E261F009B2028 /* Model.xcdatamodel */,
+				3505FC121E1E3602009B2028 /* Model.xcdatamodel */,
 			);
-			currentVersion = 3505FC021E1E261F009B2028 /* Model.xcdatamodel */;
+			currentVersion = 3505FC121E1E3602009B2028 /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
