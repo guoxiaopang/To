@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3505FC031E1E261F009B2028 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3505FC011E1E261F009B2028 /* Model.xcdatamodeld */; };
+		3505FC0A1E1E2AAA009B2028 /* UserDetailReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3505FC091E1E2AAA009B2028 /* UserDetailReminderViewController.m */; };
+		3505FC0D1E1E2D01009B2028 /* UserDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3505FC0C1E1E2D01009B2028 /* UserDetailTableViewCell.m */; };
 		350FDED51E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */; };
 		3572B18E1E14A28B00521111 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572B17E1E14A28B00521111 /* AppDelegate.m */; };
 		3572B18F1E14A28B00521111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3572B17F1E14A28B00521111 /* Assets.xcassets */; };
@@ -52,6 +54,10 @@
 
 /* Begin PBXFileReference section */
 		3505FC021E1E261F009B2028 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		3505FC081E1E2AAA009B2028 /* UserDetailReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailReminderViewController.h; sourceTree = "<group>"; };
+		3505FC091E1E2AAA009B2028 /* UserDetailReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailReminderViewController.m; sourceTree = "<group>"; };
+		3505FC0B1E1E2D01009B2028 /* UserDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailTableViewCell.h; sourceTree = "<group>"; };
+		3505FC0C1E1E2D01009B2028 /* UserDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailTableViewCell.m; sourceTree = "<group>"; };
 		350FDED31E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailNormalEditTableViewCell.h; sourceTree = "<group>"; };
 		350FDED41E1B702D003A484A /* PeopleDetailNormalEditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailNormalEditTableViewCell.m; sourceTree = "<group>"; };
 		3572B17D1E14A28B00521111 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +165,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3505FC041E1E2715009B2028 /* 提醒 */ = {
+			isa = PBXGroup;
+			children = (
+				3505FC051E1E2715009B2028 /* Controller */,
+				3505FC061E1E2715009B2028 /* Model */,
+				3505FC071E1E2715009B2028 /* View */,
+			);
+			path = "提醒";
+			sourceTree = "<group>";
+		};
+		3505FC051E1E2715009B2028 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3505FC081E1E2AAA009B2028 /* UserDetailReminderViewController.h */,
+				3505FC091E1E2AAA009B2028 /* UserDetailReminderViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3505FC061E1E2715009B2028 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3505FC071E1E2715009B2028 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3505FC0B1E1E2D01009B2028 /* UserDetailTableViewCell.h */,
+				3505FC0C1E1E2D01009B2028 /* UserDetailTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3572B17B1E14A28B00521111 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +229,7 @@
 		3572B1861E14A28B00521111 /* 人物 */ = {
 			isa = PBXGroup;
 			children = (
+				3505FC041E1E2715009B2028 /* 提醒 */,
 				359BE1181E1D20C500CFCA55 /* 增加事件 */,
 				3579155F1E164569005C0F0A /* 人物详情 */,
 				3579154B1E163C8A005C0F0A /* 联系人列表 */,
@@ -659,6 +701,7 @@
 				3572B19F1E14A34900521111 /* TodayViewController.m in Sources */,
 				3572B1B81E14BE9F00521111 /* LeftHeadView.m in Sources */,
 				35B5954E1E1BC0480013B366 /* PeopleDetailTagManager.m in Sources */,
+				3505FC0A1E1E2AAA009B2028 /* UserDetailReminderViewController.m in Sources */,
 				3572B1AB1E14B14C00521111 /* LeftViewController.m in Sources */,
 				359BE11E1E1D20E600CFCA55 /* AddEventViewController.m in Sources */,
 				3572B1EF1E15153600521111 /* UserManager.m in Sources */,
@@ -691,6 +734,7 @@
 				357915651E16457E005C0F0A /* PeopleDetailController.m in Sources */,
 				357915681E164703005C0F0A /* PeopleDetailNormalTableViewCell.m in Sources */,
 				359BE1161E1CD67700CFCA55 /* PeopleDetailThingManager.m in Sources */,
+				3505FC0D1E1E2D01009B2028 /* UserDetailTableViewCell.m in Sources */,
 				35B5954B1E1BAD100013B366 /* TagModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

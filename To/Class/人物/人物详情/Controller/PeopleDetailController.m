@@ -21,6 +21,7 @@
 #import "PeopleDetailThingManager.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import "UserManager.h"
+#import "UserDetailReminderViewController.h"
 
 static NSString *peopleDetailNormalTableViewCellIdent = @"peopleDetailNormalTableViewCellIdent";
 static NSString *peopleDetailSectionViewIdent = @"peopleDetailSectionViewIdent";
@@ -330,7 +331,10 @@ static NSString *peopleDetailThingTableViewCellIdent = @"peopleDetailThingTableV
 {
     if (indexPath.section == 0)
     {
-        
+        UserDetailReminderViewController *controller = [[UserDetailReminderViewController alloc] init];
+        PeopleDetailInfoModel *model = [self.dataManager modelWithRow:indexPath.row];
+        controller.model = model;
+        [self.navigationController pushViewController:controller animated:YES];
     }
     else if(indexPath.section == 1)
     {
