@@ -42,12 +42,14 @@
 #endif
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"d.sqlite"];
     
-//    [JSPatch startWithAppKey:@"51032afe02cb2d41"];
-//#ifdef DEBUG
-//    [JSPatch setupDevelopment];
-//#endif
-//    [JSPatch sync];
+    [JSPatch startWithAppKey:@"51032afe02cb2d41"];
+#ifdef DEBUG
+    [JSPatch setupDevelopment];
+#endif
+    [JSPatch sync];
     [Bugly startWithAppId:@"cd4f73088e"];
+    
+    
     return YES;
 }
 

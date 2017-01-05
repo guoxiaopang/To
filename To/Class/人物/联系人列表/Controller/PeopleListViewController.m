@@ -16,6 +16,7 @@
 #import "ToNavigationController.h"
 #import "PeopleDetailController.h"
 #import "Masonry.h"
+#import "AddEventViewController.h"
 
 static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 @interface PeopleListViewController ()<UITableViewDelegate, UITableViewDataSource, PeopleListDatamanagerDelegate>
@@ -89,7 +90,7 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 {
     if (!_tableView)
     {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 64.0f) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = UITableViewAutomaticDimension;
@@ -123,6 +124,7 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
     PeopleListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PeopleListTableViewCellIdent];
     UserModel *model = [self.dataManager modelWithIndexPath:indexPath];
     [cell reloadData:model];
+    
     return cell;
 }
 
@@ -179,11 +181,13 @@ static NSString *PeopleListTableViewCellIdent = @"PeopleListTableViewCellIdent";
 {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *addPerson = [UIAlertAction actionWithTitle:@"增加联系人" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"增加联系人");
+        [self pushAddController];
     }];
     
     UIAlertAction *addThing = [UIAlertAction actionWithTitle:@"增加事件" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"增加事件");
+        AddEventViewController *controller = [[AddEventViewController alloc] init];
+        ToNavigationController *navigationVC = [[ToNavigationController alloc] initWithRootViewController:controller];
+        [self presentViewController:navigationVC animated:YES completion:nil];
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         
